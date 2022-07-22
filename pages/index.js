@@ -48,14 +48,14 @@ export default function Home() {
       <header class="bg-back-1 bg-cover bg-no-repeat h-screen -mt-20" id="header">
 
         {/*============= Container ============= */}
-        <div class="container mx-auto grid lg:grid-cols-2 ">
+        <div class="container mx-auto grid lg:grid-cols-2">
 
           {/*============= Hero-Column-1 ============= */}
           <div class=""></div>
 
           {/*============= Hero-Column-2 ============= */}
           <div class="p-12  text-shadow">
-            <div class="font-sans text-left pt-[400px] lg:pt-[100px]">
+            <div class="font-sans text-left pt-[200px] lg:pt-[100px]">
 
               {/*============= Row 1 ============= */}
               <h2 class="lg:leading-[100px] md:text-[60px] leading-[1.2] text-slate-700 font-serif uppercase">Valentin Law LLC</h2>
@@ -73,7 +73,7 @@ export default function Home() {
 
                 {/*============= Button 2 ============= */}
                 <a href="https://koalendar.com/e/consultation-koaIkkTh" className="grid lg:col-span-6 p-2">
-                  <button type="button" className="text-white bg-yellow-900 rounded-lg md:text-md leading-[25px] p-4">Schedule a Consultation</button>
+                  <button type="button" className="text-white bg-yellow-900 rounded-lg md:text-md leading-[25px] p-4 ">Schedule a Consultation</button>
                 </a>
 
               </div>
@@ -83,7 +83,7 @@ export default function Home() {
       </header>
 
       {/*########################### Notification  ########################### */}
-      <section class="py-[50px] bg-slate-700 ">
+      <section class="py-[20px] bg-slate-700 ">
         <div class="container mx-auto">
           <h1 className="md:text-[28px] text-center text-neutral-200">
             *Free Consultations for a Limited Time*
@@ -113,23 +113,23 @@ export default function Home() {
           </div>
 
           {/*============= Overview-Column-2 ============= */}
-          <div class="bg-back-5 bg-cover opacity-90 h-[700px] w-full " id="overview-col-2">
+          <div class="bg-back-5 opacity-90 h-[700px] w-full " id="overview-col-2">
 
           </div>
         </div>
       </section>
 
       {/*########################### Practice Areas ########################### */}
-      <section class="py-[60px] bg-back-3 bg-cover bg-no-repeat" id="practice-area">
+      <section class="bg-back-3 bg-cover bg-no-repeat" id="practice-area">
         <div class="container mx-auto">
-          <div class="text-neutral-900 py-24 ">
+          <div class="text-neutral-900 py-12">
 
             {/*============= Row-1 ============= */}
             <h3 className="text-[24px] text-center font-medium font-serif uppercase text-yellow-900">we're here to help</h3>
               <h1 class="text-[60px] text-center font-medium font-serif uppercase pt-4 text-slate-800">Know Your Rights</h1>
 
             {/*============= Row-2 ============= */}
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 text-left gap-5 pt-[100px] px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 text-left gap-5 pt-[50px] px-6">
               
               {/*============= Removal Defense ============= */}
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
@@ -266,7 +266,7 @@ export default function Home() {
       </section>
 
       {/*########################### Overview 2 ########################### */}
-      <section class="py-[60px] ">
+      <section class="py-[20px] ">
         <div class="container mx-auto md:grid lg:grid-cols-2">
           
           
@@ -274,7 +274,7 @@ export default function Home() {
           <div class="lg:p-24" id="overview-col-1">
             <h3 class="text-[20px] text-center md:text-right text-slate-700 ">Our Reach</h3>
             <h2 class="text-[20px] lg:text-[40px] text-center md:text-right font-semibold uppercase text-yellow-900">Representation in 50 States</h2>
-            <p class="text-[15px] leading-[25px] pt-12 text-justify indent-8 ">
+            <p class="text-[16px] leading-[30px] pt-12 text-justify indent-8 ">
               Since 2020, Mr. Valentin has dedicated himself to hundreds of
               immigration matters and clients. We are proud of his proven record
               of consistently obtaining favorable results in various matters
@@ -293,7 +293,7 @@ export default function Home() {
       </section>
 
       {/*########################### About ########################### */}
-      <section class="py-[80px]" id="about">
+      <section class="py-[20px]" id="about">
         <div class="container mx-auto grid lg:grid-cols-2 ">
 
           {/*============= About-Column-1 ============= */}
@@ -306,7 +306,7 @@ export default function Home() {
           </div>
 
           {/*============= About-Column-2 ============= */}
-          <div class="lg:p-24">
+          <div class="lg:px-12">
             
               <div className="text-[20px] text-yellow-900 my-6">
                 Founder & Managing Partner
@@ -314,7 +314,7 @@ export default function Home() {
               <div class="text-[32px] lg:text-[42px] text-slate-700 font-medium my-6">
                 Julio Zaconet Valentin, Esq.
               </div>
-              <div class="italic text-[14px]">
+              <div class="italic text-[16px] leading-[30px] text-justify">
                 "The best part of my practice is knowing that at the end of the
                 day, a family gets to remain together — that because of the hard
                 work put forth, they now have the ability to make their dreams
@@ -323,7 +323,7 @@ export default function Home() {
               </div>
             
             <div class="py-12 space-y-4 indent-8 text-justify">
-              <p class="text-[14px] leading-[25px]">
+              <p class="text-[16px] leading-[30px]">
                 A proud native of Peru, Mr. Valentin migrated to the United
                 States at the age of 5 with his family. Without knowledge of the
                 language or culture, through hard work, Mr. Valentin graduated
@@ -336,7 +336,7 @@ export default function Home() {
                 on first-degree murder cases to that of representing individuals
                 seeking relief in immigration court
               </p>
-              <p class="text-[14px] leading-[25px]">
+              <p class="text-[16px] leading-[30px]">
                 After interning, externing, and working in criminal defense for
                 multiple years in the Triangle area of North Carolina, Mr.
                 Valentin moved to Atlanta, where he honed and mastered
@@ -348,7 +348,7 @@ export default function Home() {
                 etc. Of these cases, Mr. Valentin is proud to have won all but
                 one -which is currently on appeal.{" "}
               </p>
-              <p class="text-[14px] leading-[25px]">
+              <p class="text-[16px] leading-[30px]">
                 Valentin has additionally represented individuals throughout the
                 United States in various immigration matters including Federal
                 Mandamus actions, APA actions before federal district courts,
@@ -490,7 +490,7 @@ export default function Home() {
       </section>
 
       {/*########################### Contact Us ########################### */}
-      <section class="py-20" id="contact-us">
+      <section class="py-[20px]" id="contact-us">
 
         {/*============= Container ============= */}
         <div class="grid lg:grid-cols-2 ">
