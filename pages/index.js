@@ -45,7 +45,7 @@ export default function Home() {
       </nav>
 
       {/*########################### Header ###########################*/}
-      <header class="bg-back-1 bg-cover bg-no-repeat bg-fixed h-screen -mt-20" id="header">
+      <header class="bg-back-1 bg-cover bg-no-repeat h-screen -mt-20" id="header">
 
         {/*============= Container ============= */}
         <div class="container mx-auto grid lg:grid-cols-2 ">
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
 
           {/*============= Overview-Column-2 ============= */}
-          <div class="bg-back-5 bg-cover opacity-90 h-[700px]" id="overview-col-2">
+          <div class="bg-back-5 bg-cover opacity-90 h-[700px] w-full " id="overview-col-2">
 
           </div>
         </div>
