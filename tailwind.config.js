@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '375px',
+      },
       backgroundImage: {
         'back-1' : "url('..//public/artboard2.jpg')",
         'back-2' : "url('..//public/scott-graham.jpg')",
@@ -13,7 +16,7 @@ module.exports = {
         'back-4' : "url('..//public/new-york.jpg')",
         'back-5' : "url('..//public/julio-reyes-1.jpg')",
         'overview-img-1' : "url('..//public/flag.jpg')"
-      }
+      },
     },
   },
   plugins: [],
