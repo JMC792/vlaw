@@ -1,10 +1,38 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import { useState, useEffect, Fragment } from 'react';
 
 export default function Home() {
+  
+  {/*########################### mobile navbar ###########################*/}
+
+
+  {/*########################### Adds sticky to class to navbar ###########################*/}
+  const [offcanvas, setOffcanvas] = useState(false);
+  const showOffcanvas = () => setOffcanvas(!offcanvas);
+  
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+        window.removeEventListener('scroll', isSticky);
+      };
+    });
+
+  const isSticky = (e) => {
+    const navbar = document.querySelector('.z-40');
+    const scrollTop = window.scrollY;
+    scrollTop >= 250
+        ? navbar.classList.add('sticky')
+        : navbar.classList.remove('sticky');
+  };
+
+
+
+  
   return (
     <div class=" text-black  bg-white">
+      
       <head>
         <title>Valentin Law</title>
         <link rel="icon" href="gavel.svg" />
@@ -12,40 +40,88 @@ export default function Home() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        <script src="https://kit.fontawesome.com/445848c381.js" crossorigin="anonymous"></script>
       </head>
 
+      {/*########################### Announcement ###########################*/}
+      <div className="hidden lg:block bg-slate-700 py-2">
+        <div className="container mx-auto">
+          <div className="flex justify-evenly">
+            {/*----------------------- Column 1 ----------------------- */}
+            <div class="flex text-neutral-200 text-[16px]">
+                    <span class="material-symbols-outlined text-yellow-600">phone</span>
+                      <span class="ml-2 text-center">Telephone:</span>
+                          <a href="tel:+070-3689-56-56-56" class="px-2">(+1) 404-919-0443 </a>
+            </div>
+
+            {/*----------------------- Column 2 ----------------------- */}
+            <div class="flex text-neutral-200">
+                    <span class="material-symbols-outlined text-yellow-600">mail</span>
+                      <span class="ml-2 text-center">Mail:</span>
+                          <a href="mailto: julio@valentinlaw.us" class="px-2">julio@valentinlaw.us</a>
+            </div>
+
+            <div class="flex gap-x-4">
+              <span class="text-neutral-200">Visit our Socials </span>
+                <a href="https://www.instagram.com/atlimmigration/" class="text-yellow-600">
+                  <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+
+                <a href="https://www.instagram.com/atlimmigration/" class="text-yellow-600">
+                  <i class="fa-brands fa-youtube fa-xl"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@immigrationatl" class="text-yellow-600">
+                  <i class="fa-brands fa-tiktok fa-xl"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@immigrationatl" class="text-yellow-600">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/*########################### Navbar ###########################*/}
-      <nav class="z-50 sticky bg-neutral-100 top-0 pb-6">
-        <div class="container flex e mx-auto justify-evenly text-neutral-900 font-serif ">
-          <a
-            class="pt-6 hover:text-orange-700 transition-colors delay-100"
-            href="#header"
-          >
-            Home
-          </a>
-          <a
-            className="pt-6 hover:text-orange-700 transition-colors delay-100"
-            href="#practice-area"
-          >
-            Practice Areas
-          </a>
-          <a
-            class="pt-6 hover:text-orange-700 transition-colors delay-100"
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            class="pt-6 hover:text-orange-700 transition-colors delay-100"
-            href="#contact-us"
-          >
-            Contact Us
-          </a>
+      <nav class="z-40 bg-neutral-100 top-0" id="#navbar">
+        <div class="z-50 container mx-auto">
+          <div class="flex flex-nowrap items-center justify-between">
+            {/*----------------------- Column 1 / Logo ----------------------- */}
+            <a href="#header" class="">
+              <img src="logo.png" class="w-[50px]" alt="Flowbite Logo" />
+                </a>
+
+            {/*----------------------- Column 2 ----------------------- */}
+              <div className="hidden lg:flex gap-x-6" id="navbar-links">
+                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#vision">Our Vision</a></div>
+                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#practice-area">Practice</a></div>
+                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#about">About</a></div>
+                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#testimonials">Testimonials</a></div>
+                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#contact-us">Contact Us</a></div>
+              </div>
+              
+                    
+            {/*----------------------- Column 3 ----------------------- */}
+              <div class="text-slate-700 hover:text-yellow-900 transition-colors delay-100 font-bold">
+                <span class="material-symbols-outlined">shield</span>
+                  <span class="ml-2 text-center">Need Help?</span>
+                    <br></br>
+                      <a href="mailto:+070-3689-56-56-56" class="text-center">Call: (+1) 404-919-0443 </a>
+              </div>
+
+              {/*----------------------- Column 4 ----------------------- */}
+              <div className="hidden xs:flex">
+                <a href="#" className="" id="toggle-button">
+                <span className="material-symbols-outlined">menu</span>
+                </a>
+              </div>
+            </div>
         </div>
       </nav>
 
       {/*########################### Header ###########################*/}
-      <header class="bg-back-1 bg-cover bg-no-repeat h-screen -mt-20" id="header">
+      <header class="bg-back-1 bg-cover bg-no-repeat h-screen" id="header">
 
         {/*============= Container ============= */}
         <div class="container mx-auto grid lg:grid-cols-2">
@@ -57,23 +133,23 @@ export default function Home() {
           <div class="p-12  text-shadow">
             <div class="font-sans text-left pt-[200px] lg:pt-[100px]">
 
-              {/*============= Row 1 ============= */}
-              <h2 class="lg:leading-[100px] md:text-[60px] leading-[1.2] text-slate-700 font-serif uppercase">Valentin Law LLC</h2>
+              {/*============= Row 1 / Title============= */}
+              <h2 class="lg:leading-[100px] text-[30px] md:text-[60px] leading-[1.2] text-slate-700 font-serif uppercase">Valentin Law LLC</h2>
 
-              {/*============= Row 2 ============= */}
-              <h3 class="text-[24px] mt-[12px] text-slate-700 font-serif uppercase">"Immigration for All"</h3>
+              {/*============= Row 2 / Subtitle ============= */}
+              <h3 class="text-[14px] md:text-[25px] mt-[12px] text-slate-700 font-serif uppercase">"Immigration for All"</h3>
 
-              {/*============= Row 3 ============= */}
-              <div class="mt-8 grid lg:grid-cols-12 gap-x-[45px]">
+              {/*============= Row 3 / Buttons ============= */}
+              <div class="mt-8 grid md:grid-cols-12 gap-x-[45px]">
 
                 {/*============= Button 1 ============= */}
-                <a href="#contact-us" class="grid lg:col-span-4 p-2">
-                  <button type="button" className="text-white bg-yellow-900 rounded-lg text-xl leading-[25px] px-7 py-4 ">Contact us</button>
+                <a href="#contact-us" class="grid md:col-span-4 p-2">
+                  <button type="button" className="text-white bg-slate-700 rounded-lg text-xl leading-[25px] px-7 py-4 ">Contact us</button>
                 </a>
 
                 {/*============= Button 2 ============= */}
-                <a href="https://koalendar.com/e/consultation-koaIkkTh" className="grid lg:col-span-6 p-2">
-                  <button type="button" className="text-white bg-yellow-900 rounded-lg md:text-md leading-[25px] p-4 ">Schedule a Consultation</button>
+                <a href="https://koalendar.com/e/consultation-koaIkkTh" className="grid md:col-span-6 p-2">
+                  <button type="button" className="text-white bg-slate-700 rounded-lg md:text-[20px] leading-[25px] p-2 ">Schedule a Consultation</button>
                 </a>
 
               </div>
@@ -92,13 +168,13 @@ export default function Home() {
       </section>
 
       {/*########################### Overview 1 ########################### */}
-      <section class="py-[60px] " id="overview">
+      <section class="py-[60px] bg-back-8 bg-cover" id="vision">
         <div class="container mx-auto grid lg:grid-cols-2">
 
           {/*============= Overview-Column-1 ============= */}
           <div class="lg:p-24 py-12" id="overview-col-1">
             <h3 class="text-[20px] text-center md:text-right text-yellow-900 uppercase">Our Vision</h3>
-              <h2 class="text-[32px] text-center md:text-[42px] md:text-right uppercase mb-12 text-slate-700">Our commitment to You</h2>
+              <h2 class="text-[32px] text-center md:text-[42px] md:text-right uppercase mb-12 text-slate-700 font-">Our commitment to You</h2>
                 <p class="text-[16px] leading-[25px] mt-4 text-justify indent-8">
                   Valentin Law LLC is a full-service immigration law firm based in
                   Atlanta. The firm was built by immigrants and serves to help
@@ -113,14 +189,14 @@ export default function Home() {
           </div>
 
           {/*============= Overview-Column-2 ============= */}
-          <div class="bg-back-5 opacity-90 h-[700px] w-full " id="overview-col-2">
+          <div class="bg-back-5 bg-cover opacity-90 h-[700px] w-full rounded-xl" id="overview-col-2">
 
           </div>
         </div>
       </section>
 
       {/*########################### Practice Areas ########################### */}
-      <section class="bg-back-3 bg-cover bg-no-repeat" id="practice-area">
+      <section class="py-[60px] bg-back-3 bg-cover bg-no-repeat" id="practice-area">
         <div class="container mx-auto">
           <div class="text-neutral-900 py-12">
 
@@ -266,7 +342,7 @@ export default function Home() {
       </section>
 
       {/*########################### Overview 2 ########################### */}
-      <section class="py-[20px] ">
+      <section class="py-[60px]">
         <div class="container mx-auto md:grid lg:grid-cols-2">
           
           
@@ -288,18 +364,18 @@ export default function Home() {
           </div>
 
           {/*============= Overview-Column-2 ============= */}
-          <div class="bg-back-4 bg-cover"></div>
+          <div class="bg-back-4 bg-cover rounded-xl"></div>
         </div>
       </section>
 
       {/*########################### About ########################### */}
-      <section class="py-[20px]" id="about">
+      <section class="py-[20px] bg-back-6" id="about">
         <div class="container mx-auto grid lg:grid-cols-2 ">
 
           {/*============= About-Column-1 ============= */}
           <div class="">
             <img
-              class="w-full"
+              class="w-full rounded-xl"
               src="julio1.jpeg"
               alt="Julio Zaconet Valentin"
             ></img>
@@ -361,11 +437,11 @@ export default function Home() {
       </section>
 
       {/*########################### Testimonials ########################### */}
-      <section class="bg-back-2 bg-cover bg-fixed bg-no-repeat py-[60px]">
+      <section class="bg-back-2 bg-cover bg-fixed bg-no-repeat py-[60px]" id="testimonials">
         <div class="container mx-auto">
           {/*============= Testimonial-Row 1 ============= */}
-          <h2 className="text-[20px] text-white uppercase">Testimonials</h2>
-          <h1 class="text-[42px] text-center text-neutral-100 uppercase">
+          <h2 className="text-[20px] text-neutral-200 text-center uppercase">Testimonials</h2>
+          <h1 class="text-[42px] text-center text-neutral-200 uppercase">
             What our clients say about us{" "}
           </h1>
 
@@ -490,7 +566,7 @@ export default function Home() {
       </section>
 
       {/*########################### Contact Us ########################### */}
-      <section class="py-[20px]" id="contact-us">
+      <section class="py-[20px] bg-back-7 bg-cover" id="contact-us">
 
         {/*============= Container ============= */}
         <div class="grid lg:grid-cols-2 ">
@@ -499,10 +575,10 @@ export default function Home() {
           <div class="p-12">
 
             {/*============= heading ============= */}
-            <h1 class="text-[20px] pb-[36px] text-yellow-900">Contact Us</h1>
+            <h1 class="text-[20px] pb-[36px] text-yellow-900 uppercase">Where you can find us</h1>
 
             {/*============= Title ============= */}
-            <h1 class="text-[42px] pb-[36px] text-center font-medium uppercase text-slate-700">Let's Talk</h1>
+            <h1 class="text-[42px] pb-[36px] text-left font-medium uppercase text-slate-700">Let's Talk about your future</h1>
             
             {/*============= List Column ============= */}
             <div class="mt-12 space-y-3 text-xl">
@@ -510,27 +586,23 @@ export default function Home() {
 
                 {/*============= Address Row ============= */}
                 <div class="pt-[15px]">
+                  <h3 class="font-medium text-2xl text-yellow-900 pb-2">We are located at</h3>
                   <span class="material-symbols-outlined">pin_drop</span>
-                  <span class="pl-3 text-[20px]">
-                    1201 West Peachtree Street NW Suite 2300 Atlanta GA 30309
-                  </span>
+                    <span class="pl-3 text-[20px]">1201 West Peachtree Street NW Suite 2300 Atlanta GA 30309</span>
                 </div>
 
                 {/*============= Phone Number Row ============= */}
                 <div class="pt-[20px]">
+                <h3 class="font-medium text-2xl text-yellow-900 pb-2">Our phone number</h3>
                   <span class="material-symbols-outlined">call</span>
-                  <a
-                    href="tel:+070-3689-56-56-56"
-                    class="pl-3 hover:text-blue-500 text-[20px]"
-                  >
-                    (+1) 980-957-3914
-                  </a>
+                    <a href="tel:+070-3689-56-56-56" class="pl-3 hover:text-blue-500 text-[20px]">(+1) 404-919-0443</a>
                 </div>
 
                 {/*============= Email Row ============= */}
                 <div class="pt-[20px]">
+                <h3 class="font-medium text-2xl text-yellow-900 pb-2">Our email</h3>
                   <span class="material-symbols-outlined">mail</span>
-                  <a class="pl-3 text-[20px]">julio@valentinlaw.us</a>
+                    <a class="pl-3 text-[20px]">julio@valentinlaw.us</a>
                 </div>
               </div>
             </div>
@@ -539,7 +611,7 @@ export default function Home() {
           {/*============= RRight Column ============= */}
           <div class="bg-neutral-800">
             <iframe
-              class="w-full h-full"
+              class="w-full h-[500px] md:h-full"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.9759958007053!2d-84.38945188448464!3d33.7871180391018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045b68f00001%3A0x2d61f5aaa5b38f55!2s1201%20W%20Peachtree%20St%20NW%20Suite%3A%202300%2C%20Atlanta%2C%20GA%2030309!5e0!3m2!1sen!2sus!4v1656719326720!5m2!1sen!2sus"
               allowfullscreen=""
               loading="lazy"
