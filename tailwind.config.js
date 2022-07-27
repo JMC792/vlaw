@@ -17,7 +17,8 @@ module.exports = {
         'back-5' : "url('..//public/immigration-girl.jpg')",
         'back-6' : "url('..//public/law-backgrounds-1.png')",
         'back-7' : "url('..//public/gavel.jpg')",
-        'back-8' : "url('..//public/flag.jpg')"
+        'back-8' : "url('..//public/flag.jpg')",
+        'back-9' : "url('..//public/library.jpg')"
       },
     },
   },

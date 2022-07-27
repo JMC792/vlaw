@@ -6,18 +6,20 @@ import { useState, useEffect, Fragment } from 'react';
 export default function Home() {
   
   {/*########################### mobile navbar ###########################*/}
+  
 
 
-  {/*########################### Adds sticky to class to navbar ###########################*/}
+  {/*########################### Adds sticky  ###########################*/}
+
   const [offcanvas, setOffcanvas] = useState(false);
   const showOffcanvas = () => setOffcanvas(!offcanvas);
   
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
-        window.removeEventListener('scroll', isSticky);
-      };
-    });
+      window.removeEventListener('scroll', isSticky);
+    };
+  });
 
   const isSticky = (e) => {
     const navbar = document.querySelector('.z-40');
@@ -32,7 +34,6 @@ export default function Home() {
   
   return (
     <div class=" text-black  bg-white">
-      
       <head>
         <title>Valentin Law</title>
         <link rel="icon" href="gavel.svg" />
@@ -40,7 +41,10 @@ export default function Home() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
-        <script src="https://kit.fontawesome.com/445848c381.js" crossorigin="anonymous"></script>
+        <script
+          src="https://kit.fontawesome.com/445848c381.js"
+          crossorigin="anonymous"
+        ></script>
       </head>
 
       {/*########################### Announcement ###########################*/}
@@ -49,35 +53,55 @@ export default function Home() {
           <div className="flex justify-evenly">
             {/*----------------------- Column 1 ----------------------- */}
             <div class="flex text-neutral-200 text-[16px]">
-                    <span class="material-symbols-outlined text-yellow-600">phone</span>
-                      <span class="ml-2 text-center">Telephone:</span>
-                          <a href="tel:+070-3689-56-56-56" class="px-2">(+1) 404-919-0443 </a>
+              <span class="material-symbols-outlined text-yellow-600">
+                phone
+              </span>
+              <span class="ml-2 text-center">Telephone:</span>
+              <a href="tel:+070-3689-56-56-56" class="px-2">
+                (+1) 404-919-0443{" "}
+              </a>
             </div>
 
             {/*----------------------- Column 2 ----------------------- */}
             <div class="flex text-neutral-200">
-                    <span class="material-symbols-outlined text-yellow-600">mail</span>
-                      <span class="ml-2 text-center">Mail:</span>
-                          <a href="mailto: julio@valentinlaw.us" class="px-2">julio@valentinlaw.us</a>
+              <span class="material-symbols-outlined text-yellow-600">
+                mail
+              </span>
+              <span class="ml-2 text-center">Mail:</span>
+              <a href="mailto: julio@valentinlaw.us" class="px-2">
+                julio@valentinlaw.us
+              </a>
             </div>
 
             <div class="flex gap-x-4">
               <span class="text-neutral-200">Visit our Socials </span>
-                <a href="https://www.instagram.com/atlimmigration/" class="text-yellow-600">
-                  <i class="fa-brands fa-instagram fa-xl"></i>
-                </a>
+              <a
+                href="https://www.instagram.com/atlimmigration/"
+                class="text-yellow-600"
+              >
+                <i class="fa-brands fa-instagram fa-xl"></i>
+              </a>
 
-                <a href="https://www.instagram.com/atlimmigration/" class="text-yellow-600">
-                  <i class="fa-brands fa-youtube fa-xl"></i>
-                </a>
+              <a
+                href="https://www.instagram.com/atlimmigration/"
+                class="text-yellow-600"
+              >
+                <i class="fa-brands fa-youtube fa-xl"></i>
+              </a>
 
-                <a href="https://www.tiktok.com/@immigrationatl" class="text-yellow-600">
-                  <i class="fa-brands fa-tiktok fa-xl"></i>
-                </a>
+              <a
+                href="https://www.tiktok.com/@immigrationatl"
+                class="text-yellow-600"
+              >
+                <i class="fa-brands fa-tiktok fa-xl"></i>
+              </a>
 
-                <a href="https://www.tiktok.com/@immigrationatl" class="text-yellow-600">
-                  <i class="fa-brands fa-twitter fa-xl"></i>
-                </a>
+              <a
+                href="https://www.tiktok.com/@immigrationatl"
+                class="text-yellow-600"
+              >
+                <i class="fa-brands fa-twitter fa-xl"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -90,189 +114,247 @@ export default function Home() {
             {/*----------------------- Column 1 / Logo ----------------------- */}
             <a href="#header" class="">
               <img src="logo.png" class="w-[50px]" alt="Flowbite Logo" />
-                </a>
+            </a>
 
             {/*----------------------- Column 2 ----------------------- */}
-              <div className="hidden lg:flex gap-x-6" id="navbar-links">
-                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#vision">Our Vision</a></div>
-                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#practice-area">Practice</a></div>
-                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#about">About</a></div>
-                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#testimonials">Testimonials</a></div>
-                <div><a class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100" href="#contact-us">Contact Us</a></div>
+            <div className="hidden lg:flex gap-x-6" id="navbar-links">
+              <div>
+                <a
+                  class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                  href="#vision"
+                >
+                  Our Vision
+                </a>
               </div>
-              
-                    
-            {/*----------------------- Column 3 ----------------------- */}
-              <div class="text-slate-700 hover:text-yellow-900 transition-colors delay-100 font-bold">
-                <span class="material-symbols-outlined">shield</span>
-                  <span class="ml-2 text-center">Need Help?</span>
-                    <br></br>
-                      <a href="mailto:+070-3689-56-56-56" class="text-center">Call: (+1) 404-919-0443 </a>
+              <div>
+                <a
+                  class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                  href="#practice-area"
+                >
+                  Practice
+                </a>
               </div>
-
-              {/*----------------------- Column 4 ----------------------- */}
-              <div className="hidden xs:flex">
-                <a href="#" className="" id="toggle-button">
-                <span className="material-symbols-outlined">menu</span>
+              <div>
+                <a
+                  class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                  href="#about"
+                >
+                  About
+                </a>
+              </div>
+              <div>
+                <a
+                  class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                  href="#testimonials"
+                >
+                  Testimonials
+                </a>
+              </div>
+              <div>
+                <a
+                  class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                  href="#contact-us"
+                >
+                  Contact Us
                 </a>
               </div>
             </div>
+
+            {/*----------------------- Column 3 ----------------------- */}
+            <div class="text-slate-700 hover:text-yellow-900 transition-colors delay-100 font-bold">
+              <span class="material-symbols-outlined">shield</span>
+              <span class="ml-2 text-center">Need Help?</span>
+              <br></br>
+              <a href="mailto:+070-3689-56-56-56" class="text-center">
+                Call: (+1) 404-919-0443{" "}
+              </a>
+            </div>
+
+            {/*----------------------- Column 4 ----------------------- */}
+            <div className="hidden xs:flex">
+              <a href="#" className="" id="toggle-button">
+                <span className="material-symbols-outlined">menu</span>
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
 
       {/*########################### Header ###########################*/}
       <header class="bg-back-1 bg-cover bg-no-repeat h-screen" id="header">
-
         {/*============= Container ============= */}
         <div class="container mx-auto grid lg:grid-cols-2">
-
           {/*============= Hero-Column-1 ============= */}
           <div class=""></div>
 
           {/*============= Hero-Column-2 ============= */}
           <div class="p-12  text-shadow">
             <div class="font-sans text-left pt-[200px] lg:pt-[100px]">
-
               {/*============= Row 1 / Title============= */}
-              <h2 class="lg:leading-[100px] text-[30px] md:text-[60px] leading-[1.2] text-slate-700 font-serif uppercase">Valentin Law LLC</h2>
+              <h2 class="lg:leading-[100px] text-[30px] md:text-[60px] leading-[1.2] text-slate-700 font-serif uppercase">
+                Valentin Law LLC
+              </h2>
 
               {/*============= Row 2 / Subtitle ============= */}
-              <h3 class="text-[14px] md:text-[25px] mt-[12px] text-slate-700 font-serif uppercase">"Immigration for All"</h3>
+              <h3 class="text-[14px] md:text-[25px] mt-[12px] text-slate-700 font-serif uppercase">
+                "Immigration for All"
+              </h3>
 
-              {/*============= Row 3 / Buttons ============= */}
-              <div class="mt-8 grid md:grid-cols-12 gap-x-[45px]">
-
-                {/*============= Button 1 ============= */}
-                <a href="#contact-us" class="grid md:col-span-4 p-2">
-                  <button type="button" className="text-white bg-slate-700 rounded-lg text-xl leading-[25px] px-7 py-4 ">Contact us</button>
-                </a>
-
-                {/*============= Button 2 ============= */}
-                <a href="https://koalendar.com/e/consultation-koaIkkTh" className="grid md:col-span-6 p-2">
-                  <button type="button" className="text-white bg-slate-700 rounded-lg md:text-[20px] leading-[25px] p-2 ">Schedule a Consultation</button>
-                </a>
-
-              </div>
+              
             </div>
           </div>
         </div>
       </header>
 
       {/*########################### Notification  ########################### */}
-      <section class="py-[20px] bg-slate-700 ">
+      <section class="py-[50px] bg-back-9 ">
         <div class="container mx-auto">
-          <h1 className="md:text-[28px] text-center text-neutral-200">
+          
+          {/*============= Row 1  ============= */}
+          <h1 className="md:text-[40px] text-center font-serif text-neutral-200 uppercase">
+          Let us put Our Knowledge 
+          <br></br>
+          and Experience to Work For You
+          </h1>
+
+          {/*============= Row 1  ============= */}
+          <h1 className="md:text-[28px] text-center text-neutral-200 py-4">
             *Free Consultations for a Limited Time*
           </h1>
+          {/*============= Row 2 / Buttons ============= */}
+          <div class="mt-8 flex justify-center md:justify-evenly gap-y-8">
+            
+
+            {/*============= Button 2 ============= */}
+            <a href="https://koalendar.com/e/consultation-koaIkkTh">
+              <button
+                type="button"
+                className="text-white bg-yellow-600 rounded-lg md:text-[20px] leading-[25px] px-7 py-4 "
+              >
+                Schedule a Consultation
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 
       {/*########################### Overview 1 ########################### */}
       <section class="py-[60px] bg-back-8 bg-cover" id="vision">
         <div class="container mx-auto grid lg:grid-cols-2">
-
           {/*============= Overview-Column-1 ============= */}
           <div class="lg:p-24 py-12" id="overview-col-1">
-            <h3 class="text-[20px] text-center md:text-right text-yellow-900 uppercase">Our Vision</h3>
-              <h2 class="text-[32px] text-center md:text-[42px] md:text-right uppercase mb-12 text-slate-700 font-">Our commitment to You</h2>
-                <p class="text-[16px] leading-[25px] mt-4 text-justify indent-8">
-                  Valentin Law LLC is a full-service immigration law firm based in
-                  Atlanta. The firm was built by immigrants and serves to help
-                  immigrants navigate the ever-evolving United States immigration
-                  system. We represent individuals in all matters of immigration
-                  proceedings ranging from cases in immigration court, USCIS
-                  proceedings, federal litigation and even family law -as related to
-                  immigration. Coming from humble beginnings, and migrant
-                  backgrounds, we understand the issues immigrants face in such a
-                  complex judicial system.
-                </p>
+            <h3 class="text-[20px] text-center md:text-right text-yellow-900 uppercase">
+              Our Vision
+            </h3>
+            <h2 class="text-[32px] text-center md:text-[42px] md:text-right uppercase mb-12 text-slate-700 font-serif">
+              Our commitment to You
+            </h2>
+            <p class="text-[16px] leading-[25px] mt-4 text-justify indent-8">
+              Valentin Law LLC is a full-service immigration law firm based in
+              Atlanta. The firm was built by immigrants and serves to help
+              immigrants navigate the ever-evolving United States immigration
+              system. We represent individuals in all matters of immigration
+              proceedings ranging from cases in immigration court, USCIS
+              proceedings, federal litigation and even family law -as related to
+              immigration. Coming from humble beginnings, and migrant
+              backgrounds, we understand the issues immigrants face in such a
+              complex judicial system.
+            </p>
           </div>
 
           {/*============= Overview-Column-2 ============= */}
-          <div class="bg-back-5 bg-cover opacity-90 h-[700px] w-full rounded-xl" id="overview-col-2">
-
-          </div>
+          <div
+            class="bg-back-5 bg-cover opacity-90 h-[700px] w-full rounded-xl"
+            id="overview-col-2"
+          ></div>
         </div>
       </section>
 
       {/*########################### Practice Areas ########################### */}
-      <section class="py-[60px] bg-back-3 bg-cover bg-no-repeat" id="practice-area">
+      <section
+        class="py-[60px] bg-back-3 bg-cover bg-no-repeat"
+        id="practice-area"
+      >
         <div class="container mx-auto">
           <div class="text-neutral-900 py-12">
-
             {/*============= Row-1 ============= */}
-            <h3 className="text-[24px] text-center font-medium font-serif uppercase text-yellow-900">we're here to help</h3>
-              <h1 class="text-[60px] text-center font-medium font-serif uppercase pt-4 text-slate-800">Know Your Rights</h1>
+            <h3 className="text-[24px] text-center font-medium font-serif uppercase text-yellow-900">
+              we're here to help
+            </h3>
+            <h1 class="text-[60px] text-center font-medium font-serif uppercase pt-4 text-slate-800">
+              Know Your Rights
+            </h1>
 
             {/*============= Row-2 ============= */}
             <div class="grid sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 text-left gap-5 pt-[50px] px-6">
-              
               {/*============= Removal Defense ============= */}
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">shield</i>
-                  <div class="text-[32px] ">Removal Defense</div>
-                    <p class="text-[14px] pt-[80px]">
-                      Being placed in immigration court may require representation
-                      before a judge to prevent eventual removal or deportation. Let
-                      us guide you and represent you through this process!
-                    </p>
+                <div class="text-[32px] ">Removal Defense</div>
+                <p class="text-[14px] pt-[80px]">
+                  Being placed in immigration court may require representation
+                  before a judge to prevent eventual removal or deportation. Let
+                  us guide you and represent you through this process!
+                </p>
               </div>
 
               {/*============= Asylum ============= */}
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined ">house_with_shield</i>
-                  <div class="text-[32px] text-center">Asylum</div>
-                    <p class="text-[14px] pt-[80px]">
-                      Individuals seeking protection from the conditions or past
-                      persecution in their home countries may be eligible to apply
-                      for asylum with the United States government. We would be
-                      happy to discuss your eligibility.{" "}
-                    </p>
+                <div class="text-[32px] text-center">Asylum</div>
+                <p class="text-[14px] pt-[80px]">
+                  Individuals seeking protection from the conditions or past
+                  persecution in their home countries may be eligible to apply
+                  for asylum with the United States government. We would be
+                  happy to discuss your eligibility.{" "}
+                </p>
               </div>
 
               {/*============= Cancellation of Removal ============= */}
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">block</i>
-                  <div class="text-[32px]">Cancellation of Removal</div>
-                    <p class="text-[14px] pt-[40px]">
-                      Commonly known as the "ten year rule" many individuals who
-                      have for such a time been present in the United States and can
-                      show certain positive equities may be eligible to fight for
-                      their lawful permanent residency in court.{" "}
-                    </p>
+                <div class="text-[32px]">Cancellation of Removal</div>
+                <p class="text-[14px] pt-[40px]">
+                  Commonly known as the "ten year rule" many individuals who
+                  have for such a time been present in the United States and can
+                  show certain positive equities may be eligible to fight for
+                  their lawful permanent residency in court.{" "}
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">build</i>
-                  <div class="text-[32px] ">Adjustment of status</div>
-                    <p class="text-[14px] pt-[35px]">
-                      Certain individuals may be eligible to become residents in the
-                      United States. Allow us to guide you through your journey to
-                      Lawful Permanent Residency.
-                    </p>
+                <div class="text-[32px] ">Adjustment of status</div>
+                <p class="text-[14px] pt-[35px]">
+                  Certain individuals may be eligible to become residents in the
+                  United States. Allow us to guide you through your journey to
+                  Lawful Permanent Residency.
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">groups</i>
-                  <div class="text-[32px]">Consular Processing</div>
-                  <p class="text-[14px] pt-[35px]">
-                    {" "}
-                    Other individuals need to attend a consular appointment in
-                    their home country to enter the United States legally. It is
-                    often a long and complex process- we are here to help!
-                  </p>
+                <div class="text-[32px]">Consular Processing</div>
+                <p class="text-[14px] pt-[35px]">
+                  {" "}
+                  Other individuals need to attend a consular appointment in
+                  their home country to enter the United States legally. It is
+                  often a long and complex process- we are here to help!
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">escalator_warning</i>
-                  <div class="text-[32px] ">Special Immigrant Juvenile Status</div>
-                    <p class="text-[14px] pt-[35px]">
-                      Many individuals who entered the United States before their
-                      18th birthdays (and in some cases their 21st), and can
-                      demonstrate certain family-based characteristics may be
-                      eligible for immigration benefits. Allow us to help you or
-                      your children.{" "}
-                    </p>
+                <div class="text-[32px] ">
+                  Special Immigrant Juvenile Status
+                </div>
+                <p class="text-[14px] pt-[35px]">
+                  Many individuals who entered the United States before their
+                  18th birthdays (and in some cases their 21st), and can
+                  demonstrate certain family-based characteristics may be
+                  eligible for immigration benefits. Allow us to help you or
+                  your children.{" "}
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
@@ -287,55 +369,56 @@ export default function Home() {
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">money_off</i>
-                  <div class="text-[32px]">Waivers</div>
-                    <p class="text-[14px] pt-[80px]">
-                      Certain individuals who have committed crimes, overstayed
-                      their allotted status, entered illegally, or many other
-                      scenarios may require a waiver of these grounds to reach
-                      lawful permanent residency. We can help!
-                    </p>
+                <div class="text-[32px]">Waivers</div>
+                <p class="text-[14px] pt-[80px]">
+                  Certain individuals who have committed crimes, overstayed
+                  their allotted status, entered illegally, or many other
+                  scenarios may require a waiver of these grounds to reach
+                  lawful permanent residency. We can help!
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">swords</i>
-                  <div class="text-[32px]">Mandamus,<br></br> APA Actions</div>
-                    <p class="text-[14px] pt-[35px]">
-                      Allow us to take a stand before the government if they have
-                      taken wrongful action against you, or failed to adhere to the
-                      color of the law.{" "}
-                    </p>
+                <div class="text-[32px]">
+                  Mandamus,<br></br> APA Actions
+                </div>
+                <p class="text-[14px] pt-[35px]">
+                  Allow us to take a stand before the government if they have
+                  taken wrongful action against you, or failed to adhere to the
+                  color of the law.{" "}
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">diversity_3</i>
-                  <div class="text-[32px]">Family Petitions</div>
-                    <p class="text-[14px] pt-[80px]">
-                      {" "}
-                      Often individuals petition for their spouses, children,
-                      parents, etc. so they may lawfully migrate to the United
-                      States! Allow us to help you navigate this complex area.{" "}
-                    </p>
+                <div class="text-[32px]">Family Petitions</div>
+                <p class="text-[14px] pt-[80px]">
+                  {" "}
+                  Often individuals petition for their spouses, children,
+                  parents, etc. so they may lawfully migrate to the United
+                  States! Allow us to help you navigate this complex area.{" "}
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">travel_explore</i>
-                  <div class="text-[32px]">U-Visa/ T-Visa</div>
-                    <p class="text-[14px] pt-[80px]">
-                      Certain individuals who have been victims of crimes or
-                      trafficking may be eligible for immigration benefits. Schedule
-                      a consultation with us today to discuss your eligibility.{" "}
-                    </p>
+                <div class="text-[32px]">U-Visa/ T-Visa</div>
+                <p class="text-[14px] pt-[80px]">
+                  Certain individuals who have been victims of crimes or
+                  trafficking may be eligible for immigration benefits. Schedule
+                  a consultation with us today to discuss your eligibility.{" "}
+                </p>
               </div>
 
               <div class="text-center text-neutral-200 bg-slate-800 p-12">
                 <i class="material-symbols-outlined">boy</i>
-                  <div class="text-[32px] ">DACA</div>
-                    <p class="text-[14px] pt-[80px]">
-                      Allow us to help you renew your deferred action for childhood
-                      arrivals documents.{" "}
-                    </p>
+                <div class="text-[32px] ">DACA</div>
+                <p class="text-[14px] pt-[80px]">
+                  Allow us to help you renew your deferred action for childhood
+                  arrivals documents.{" "}
+                </p>
               </div>
-
             </div>
           </div>
         </div>
@@ -344,12 +427,16 @@ export default function Home() {
       {/*########################### Overview 2 ########################### */}
       <section class="py-[60px]">
         <div class="container mx-auto md:grid lg:grid-cols-2">
-          
-          
           {/*============= Overview-Column-1 ============= */}
           <div class="lg:p-24" id="overview-col-1">
-            <h3 class="text-[20px] text-center md:text-right text-slate-700 ">Our Reach</h3>
-            <h2 class="text-[20px] lg:text-[40px] text-center md:text-right font-semibold uppercase text-yellow-900">Representation in 50 States</h2>
+            <h3 class="text-[20px] text-center md:text-right text-slate-700 ">
+              Our Reach
+            </h3>
+            <h2 class="text-[20px] lg:text-[40px] text-center md:text-right font-medium font-serif uppercase text-yellow-900">
+              Representation in 
+              <br></br>
+              50 States
+            </h2>
             <p class="text-[16px] leading-[30px] pt-12 text-justify indent-8 ">
               Since 2020, Mr. Valentin has dedicated himself to hundreds of
               immigration matters and clients. We are proud of his proven record
@@ -371,7 +458,6 @@ export default function Home() {
       {/*########################### About ########################### */}
       <section class="py-[20px] bg-back-6" id="about">
         <div class="container mx-auto grid lg:grid-cols-2 ">
-
           {/*============= About-Column-1 ============= */}
           <div class="">
             <img
@@ -383,21 +469,20 @@ export default function Home() {
 
           {/*============= About-Column-2 ============= */}
           <div class="lg:px-12">
-            
-              <div className="text-[20px] text-yellow-900 my-6">
-                Founder & Managing Partner
-              </div>
-              <div class="text-[32px] lg:text-[42px] text-slate-700 font-medium my-6">
-                Julio Zaconet Valentin, Esq.
-              </div>
-              <div class="italic text-[16px] leading-[30px] text-justify">
-                "The best part of my practice is knowing that at the end of the
-                day, a family gets to remain together — that because of the hard
-                work put forth, they now have the ability to make their dreams
-                come true, to seize an oppotunity, one that many of us have when
-                we come to the United States.”
-              </div>
-            
+            <div className="text-[20px] text-yellow-900 my-6">
+              Founder & Managing Partner
+            </div>
+            <div class="text-[32px] lg:text-[42px] text-slate-700 font-medium font-serif my-6">
+              Julio Zaconet Valentin, Esq.
+            </div>
+            <div class="italic text-[16px] leading-[30px] text-justify">
+              "The best part of my practice is knowing that at the end of the
+              day, a family gets to remain together — that because of the hard
+              work put forth, they now have the ability to make their dreams
+              come true, to seize an oppotunity, one that many of us have when
+              we come to the United States.”
+            </div>
+
             <div class="py-12 space-y-4 indent-8 text-justify">
               <p class="text-[16px] leading-[30px]">
                 A proud native of Peru, Mr. Valentin migrated to the United
@@ -439,14 +524,18 @@ export default function Home() {
       {/*########################### Testimonials ########################### */}
       <section class="bg-back-2 bg-cover bg-fixed bg-no-repeat py-[60px]" id="testimonials">
         <div class="container mx-auto">
+
           {/*============= Testimonial-Row 1 ============= */}
-          <h2 className="text-[20px] text-neutral-200 text-center uppercase">Testimonials</h2>
-          <h1 class="text-[42px] text-center text-neutral-200 uppercase">
+          <h2 className="text-[20px] text-neutral-200 text-center uppercase">
+            Testimonials
+          </h2>
+          <h1 class="text-[42px] text-center text-neutral-200 font-serif uppercase">
             What our clients say about us{" "}
           </h1>
 
           {/*============= Testimonial-Row 2 ============= */}
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-12 text-neutral-800 ">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-12 text-neutral-800 ">            
+
             {/*============= Testimonial-Card-1 ============= */}
             <div class="rounded-xl bg-neutral-200 m-4">
               <blockquote class="p-12">
@@ -567,42 +656,55 @@ export default function Home() {
 
       {/*########################### Contact Us ########################### */}
       <section class="py-[20px] bg-back-7 bg-cover" id="contact-us">
-
         {/*============= Container ============= */}
         <div class="grid lg:grid-cols-2 ">
-
           {/*============= Left Column ============= */}
           <div class="p-12">
-
             {/*============= heading ============= */}
-            <h1 class="text-[20px] pb-[36px] text-yellow-900 uppercase">Where you can find us</h1>
+            <h1 class="text-[20px] pb-[36px] text-yellow-900 uppercase">
+              Where you can find us
+            </h1>
 
             {/*============= Title ============= */}
-            <h1 class="text-[42px] pb-[36px] text-left font-medium uppercase text-slate-700">Let's Talk about your future</h1>
-            
+            <h1 class="text-[42px] font-serif pb-[36px] text-left font-medium uppercase text-slate-700">
+              Let's Talk about your future
+            </h1>
+
             {/*============= List Column ============= */}
             <div class="mt-12 space-y-3 text-xl">
               <div class="text-[14px] leading-[27px]">
-
                 {/*============= Address Row ============= */}
                 <div class="pt-[15px]">
-                  <h3 class="font-medium text-2xl text-yellow-900 pb-2">We are located at</h3>
+                  <h3 class="font-medium text-2xl text-yellow-900 pb-2">
+                    We are located at
+                  </h3>
                   <span class="material-symbols-outlined">pin_drop</span>
-                    <span class="pl-3 text-[20px]">1201 West Peachtree Street NW Suite 2300 Atlanta GA 30309</span>
+                  <span class="pl-3 text-[20px]">
+                    1201 West Peachtree Street NW Suite 2300 Atlanta GA 30309
+                  </span>
                 </div>
 
                 {/*============= Phone Number Row ============= */}
                 <div class="pt-[20px]">
-                <h3 class="font-medium text-2xl text-yellow-900 pb-2">Our phone number</h3>
+                  <h3 class="font-medium text-2xl text-yellow-900 pb-2">
+                    Our phone number
+                  </h3>
                   <span class="material-symbols-outlined">call</span>
-                    <a href="tel:+070-3689-56-56-56" class="pl-3 hover:text-blue-500 text-[20px]">(+1) 404-919-0443</a>
+                  <a
+                    href="tel:+070-3689-56-56-56"
+                    class="pl-3 hover:text-blue-500 text-[20px]"
+                  >
+                    (+1) 404-919-0443
+                  </a>
                 </div>
 
                 {/*============= Email Row ============= */}
                 <div class="pt-[20px]">
-                <h3 class="font-medium text-2xl text-yellow-900 pb-2">Our email</h3>
+                  <h3 class="font-medium text-2xl text-yellow-900 pb-2">
+                    Our email
+                  </h3>
                   <span class="material-symbols-outlined">mail</span>
-                    <a class="pl-3 text-[20px]">julio@valentinlaw.us</a>
+                  <a class="pl-3 text-[20px]">julio@valentinlaw.us</a>
                 </div>
               </div>
             </div>
