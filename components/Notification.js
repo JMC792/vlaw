@@ -19,8 +19,17 @@ function Notification() {
             *Free Consultations for a Limited Time*
           </h1>
           {/*============= Row 2 / Buttons ============= */}
-          <div class="mt-8 flex justify-center md:justify-evenly gap-y-8">
+          <div class="mt-8 md:flex grid justify-center md:justify-evenly gap-y-8">
             
+            {/*============= Button 1 ============= */}
+            <a href="https://secure.lawpay.com/pages/valentinlaw/operating">
+              <button
+                type="button"
+                className="text-white bg-yellow-600 rounded-lg md:text-[20px] leading-[25px] px-7 py-4 w-[14rem]"
+              >
+                Make a Payment
+              </button>
+            </a>
 
             {/*============= Button 2 ============= */}
             <a href="https://koalendar.com/e/consultation-koaIkkTh">
