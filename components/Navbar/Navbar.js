@@ -96,7 +96,7 @@ function Navbar() {
 
               {/*----------------------- Column 4 ----------------------- */}
               <div className="hidden xs:flex">
-                <a href="#" className="" id="toggle-button">
+                <a href="#" className="text-neutral-200" id="toggle-button">
                   <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
                 </a>
               </div>
