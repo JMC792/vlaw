@@ -32,19 +32,19 @@ function Navbar() {
   {/*###################################################### Main HTML  ######################################################*/}
     return (
       <Fragment>
-        <nav class="py-2 z-40 bg-neutral-100 top-0" id="#navbar">
+        <nav class="py-2 z-40 bg-slate-700 top-0" id="#navbar">
           <div class="z-50 container mx-auto">
             <div class="flex flex-nowrap items-center justify-between">
               {/*----------------------- Column 1 / Logo ----------------------- */}
               <a href="#header" class="">
-                <h1 class="text-2xl font-medium font-serif">Valentin Law</h1>
+                <h1 class="text-2xl font-medium font-serif text-yellow-700">Valentin Law</h1>
               </a>
 
               {/*----------------------- Column 2 ----------------------- */}
               <div className="hidden lg:flex gap-x-6" id="navbar-links">
                 <div>
                   <a
-                    class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                    class="text-[20px] font-medium text-yellow-700 hover:text-yellow-900 transition-colors delay-100"
                     href="#vision"
                   >
                     Our Vision
@@ -52,7 +52,7 @@ function Navbar() {
                 </div>
                 <div>
                   <a
-                    class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                    class="text-[20px] font-medium text-yellow-700 hover:text-yellow-900 transition-colors delay-100"
                     href="#practice-area"
                   >
                     Practice
@@ -60,7 +60,7 @@ function Navbar() {
                 </div>
                 <div>
                   <a
-                    class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                    class="text-[20px] font-medium text-yellow-700 hover:text-yellow-900 transition-colors delay-100"
                     href="#about"
                   >
                     About
@@ -68,7 +68,7 @@ function Navbar() {
                 </div>
                 <div>
                   <a
-                    class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                    class="text-[20px] font-medium text-yellow-700 hover:text-yellow-900 transition-colors delay-100"
                     href="#testimonials"
                   >
                     Testimonials
@@ -76,7 +76,7 @@ function Navbar() {
                 </div>
                 <div>
                   <a
-                    class="text-[20px] font-medium text-slate-700 hover:text-yellow-900 transition-colors delay-100"
+                    class="text-[20px] font-medium text-yellow-700 hover:text-yellow-900 transition-colors delay-100"
                     href="#contact-us"
                   >
                     Contact Us
@@ -85,7 +85,7 @@ function Navbar() {
               </div>
 
               {/*----------------------- Column 3 ----------------------- */}
-              <div class="text-slate-700 hover:text-yellow-900 transition-colors delay-100 font-bold">
+              <div class="text-yellow-700 hover:text-yellow-900 transition-colors delay-100 font-bold">
               <i class="fa-solid fa-phone"></i>
                 <span class="ml-2 text-center">Contact Us:</span>
                 <br></br>
