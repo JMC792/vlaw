@@ -13,7 +13,7 @@ function Topbar() {
                 phone
               </span>
               <span class="ml-2 text-center">Telephone:</span>
-              <a href="tel:+070-3689-56-56-56" class="px-2">
+              <a href="tel: 404-919-0443" class="px-2">
                 (+1) 404-919-0443{" "}
               </a>
             </div>
@@ -39,7 +39,7 @@ function Topbar() {
               </a>
 
               <a
-                href="https://www.instagram.com/atlimmigration/"
+                href="https://www.youtube.com/channel/UCw9NjJpXBRKdm9ch_kj1wDQ"
                 class="text-yellow-600"
               >
                 <i class="fa-brands fa-youtube fa-xl"></i>
@@ -53,7 +53,7 @@ function Topbar() {
               </a>
 
               <a
-                href="https://www.tiktok.com/@immigrationatl"
+                href="https://twitter.com/valentinlawllc"
                 class="text-yellow-600"
               >
                 <i class="fa-brands fa-twitter fa-xl"></i>

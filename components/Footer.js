@@ -21,7 +21,7 @@ export default function Footer() {
             <i class="fa-brands fa-instagram fa-2x"></i>
           </a>
 
-          <a href="https://www.instagram.com/atlimmigration/" class="text-white">
+          <a href="https://www.youtube.com/channel/UCw9NjJpXBRKdm9ch_kj1wDQ" class="text-white">
             <i class="fa-brands fa-youtube fa-2x"></i>
           </a>
 
@@ -29,7 +29,7 @@ export default function Footer() {
             <i class="fa-brands fa-tiktok fa-2x"></i>
           </a>
 
-          <a href="https://www.tiktok.com/@immigrationatl" class="text-white">
+          <a href="https://twitter.com/valentinlawllc" class="text-white">
             <i class="fa-brands fa-twitter fa-2x"></i>
           </a>
 

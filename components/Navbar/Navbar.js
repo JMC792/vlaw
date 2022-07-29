@@ -32,12 +32,12 @@ function Navbar() {
   {/*###################################################### Main HTML  ######################################################*/}
     return (
       <Fragment>
-        <nav class="z-40 bg-neutral-100 top-0" id="#navbar">
+        <nav class="py-2 z-40 bg-neutral-100 top-0" id="#navbar">
           <div class="z-50 container mx-auto">
             <div class="flex flex-nowrap items-center justify-between">
               {/*----------------------- Column 1 / Logo ----------------------- */}
               <a href="#header" class="">
-                <img src="logo.png" class="w-[50px]" alt="Flowbite Logo" />
+                <h1 class="text-2xl font-medium font-serif">Valentin Law</h1>
               </a>
 
               {/*----------------------- Column 2 ----------------------- */}
@@ -86,11 +86,11 @@ function Navbar() {
 
               {/*----------------------- Column 3 ----------------------- */}
               <div class="text-slate-700 hover:text-yellow-900 transition-colors delay-100 font-bold">
-                <span class="material-symbols-outlined">shield</span>
-                <span class="ml-2 text-center">Need Help?</span>
+              <i class="fa-solid fa-phone"></i>
+                <span class="ml-2 text-center">Contact Us:</span>
                 <br></br>
-                <a href="tel:+070-3689-56-56-56" class="text-center">
-                  Call: (+1) 404-919-0443{" "}
+                <a href="tel: 404-919-0443" class="text-center">
+                  (+1) 404-919-0443{" "}
                 </a>
               </div>
 
