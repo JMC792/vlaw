@@ -6,17 +6,17 @@ export default function Footer() {
       <div class="container mx-auto">
         
         {/*----------------------- Row 1 ----------------------- */}
-        <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="lg:flex sm:items-center sm:justify-between">
 
           {/*----------------------- Column 1 / Logo ----------------------- */}
-          <a href="#header" class="flex">
+          <a href="#header" class="flex justify-center">
             <img src="logo.png" class="mr-3 w-[100px]" alt="Flowbite Logo" />
             <span class="self-center text-2xl text-neutral-200  font-semibold">
               Valentin Law LLC
             </span>
           </a>
 
-          <div  class="flex gap-x-20" >
+          <div  class="flex justify-center gap-x-20" >
           <a href="https://www.instagram.com/atlimmigration/" class="text-white">
             <i class="fa-brands fa-instagram fa-2x"></i>
           </a>
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           {/*----------------------- Column 2 ----------------------- */}
-          <ul class="flex flex-wrap items-center mb-6 text-sm text-neutral-200 sm:mb-0 ">
+          <ul class="flex justify-evenly items-center mb-6 text-sm text-neutral-200 py-8 ">
             <li>
               <a href="#about" class="mr-4 hover:underline md:mr-6 ">
                 About
@@ -64,9 +64,9 @@ export default function Footer() {
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 
         {/*----------------------- Row 3 ----------------------- */}
-        <span class="block text-sm text-neutral-200 sm:text-center dark:text-gray-400">
+        <span class="flex justify-center text-sm text-neutral-200 sm:text-center dark:text-gray-400 py-4">
           © 2022{" "}
-          <a href="https://flowbite.com" class="hover:underline">
+          <a href="https://flowbite.com" class="hover:underline px-2">
             Valentin Law LLC™
           </a>
           . All Rights Reserved.

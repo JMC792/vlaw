@@ -16,7 +16,7 @@ function About() {
           </div>
 
           {/*============= About-Column-2 ============= */}
-          <div class="lg:px-12">
+          <div class="lg:px-12 p-6">
             <div className="text-[20px] text-yellow-900 my-6">
               Founder & Managing Partner
             </div>

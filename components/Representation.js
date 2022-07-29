@@ -4,10 +4,10 @@ function Representation() {
   return (
     <div>
         {/*########################### Overview 2 ########################### */}
-      <section class="py-[60px]">
+      <section class="py-[60px]" id="representation">
         <div class="container mx-auto md:grid lg:grid-cols-2">
           {/*============= Overview-Column-1 ============= */}
-          <div class="lg:p-24" id="overview-col-1">
+          <div class="lg:p-24 p-6" id="overview-col-1">
             <h3 class="text-[20px] text-center md:text-right text-slate-700 ">
               Our Reach
             </h3>

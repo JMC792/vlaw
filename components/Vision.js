@@ -7,7 +7,7 @@ function Vision() {
       <section class="py-[60px] bg-back-8 bg-cover" id="vision">
         <div class="container mx-auto grid lg:grid-cols-2">
           {/*============= Overview-Column-1 ============= */}
-          <div class="lg:p-24 py-12" id="overview-col-1">
+          <div class="lg:p-24 p-6" id="overview-col-1">
             <h3 class="text-[20px] text-center md:text-right text-yellow-900 uppercase">
               Our Vision
             </h3>
