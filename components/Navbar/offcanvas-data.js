@@ -31,7 +31,7 @@ export const OffcanvasData = [
     },
     {
         title: 'Contact',
-        path: '/contact',
+        path: '#contact-us',
         cName: 'offcanvas-text',
     },
 ];
