@@ -1,6 +1,14 @@
 import React from 'react'
+import testimonials_en from '../public/locales/en/testimonials_en'
+import testimonials_es from '../public/locales/es/testimonials_es'
+import {useRouter} from "next/router";
 
 function Testimonials() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? testimonials_en : testimonials_es;
+
   return (
     <div>
         {/*########################### Testimonials ########################### */}
@@ -9,10 +17,10 @@ function Testimonials() {
 
           {/*============= Testimonial-Row 1 ============= */}
           <h2 className="text-[20px] text-neutral-200 text-center uppercase">
-            Testimonials
+            {t.heading}
           </h2>
           <h1 class="text-[42px] text-center text-neutral-200 font-serif uppercase">
-            What our clients say about us{" "}
+            {t.title}
           </h1>
 
           {/*============= Testimonial-Row 2 ============= */}

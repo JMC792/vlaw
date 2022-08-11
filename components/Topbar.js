@@ -1,6 +1,14 @@
 import React from 'react'
+import {useRouter} from "next/router";
+import topbar_en from '../public/locales/en/topbar_en'
+import topbar_es from '../public/locales/es/topbar_es'
 
 function Topbar() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? topbar_en : topbar_es
+
   return (
     <div>
         {/*########################### Announcement ###########################*/}
@@ -12,7 +20,7 @@ function Topbar() {
               <span class="material-symbols-outlined text-yellow-600">
                 phone
               </span>
-              <span class="ml-2 text-center">Telephone:</span>
+              <span class="ml-2 text-center">{t.telephone}</span>
               <a href="tel: 404-919-0443" class="px-2">
                 (+1) 404-919-0443{" "}
               </a>
@@ -23,14 +31,14 @@ function Topbar() {
               <span class="material-symbols-outlined text-yellow-600">
                 mail
               </span>
-              <span class="ml-2 text-center">Mail:</span>
+              <span class="ml-2 text-center">E-mail:</span>
               <a href="mailto: julio@valentinlaw.us" class="px-2">
                 julio@valentinlaw.us
               </a>
             </div>
 
             <div class="flex gap-x-4">
-              <span class="text-neutral-200">Visit our Socials </span>
+              <span class="text-neutral-200">{t.socials} </span>
               <a
                 href="https://www.instagram.com/atlimmigration/"
                 class="text-yellow-600"

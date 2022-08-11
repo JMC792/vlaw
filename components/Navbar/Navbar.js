@@ -3,13 +3,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, Fragment } from 'react';
 import {OffcanvasData} from './offcanvas-data'
+import {useRouter} from "next/router";
+import navbar_en from '../../public/locales/en/navbar_en'
+import navbar_es from '../../public/locales/es/navbar_es'
 
 function Navbar() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? navbar_en : navbar_es;
   
 
-    {/*============= Mobile Navbar Responsive  =============*/}
-    const [offcanvas, setOffcanvas] = useState(false);
-    const showOffcanvas = () => setOffcanvas(!offcanvas);
+  {/*============= Mobile Navbar Responsive  =============*/}
+   const [offcanvas, setOffcanvas] = useState(false);
+   const showOffcanvas = () => setOffcanvas(!offcanvas);
 
 
   {/*============= Adds sticky  =============*/}
@@ -47,7 +54,7 @@ function Navbar() {
                     class="text-[20px] font-medium text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
                     href="#vision"
                   >
-                    Our Vision
+                    {t.button1}
                   </a>
                 </div>
                 <div>
@@ -55,7 +62,7 @@ function Navbar() {
                     class="text-[20px] font-medium text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
                     href="#practice-area"
                   >
-                    Practice
+                    {t.button2}
                   </a>
                 </div>
                 <div>
@@ -63,7 +70,7 @@ function Navbar() {
                     class="text-[20px] font-medium text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
                     href="#about"
                   >
-                    About
+                    {t.button3}
                   </a>
                 </div>
                 <div>
@@ -71,7 +78,7 @@ function Navbar() {
                     class="text-[20px] font-medium text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
                     href="#testimonials"
                   >
-                    Testimonials
+                    {t.button4}
                   </a>
                 </div>
                 <div>
@@ -79,7 +86,7 @@ function Navbar() {
                     class="text-[20px] font-medium text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
                     href="#contact-us"
                   >
-                    Contact Us
+                    {t.button5}
                   </a>
                 </div>
               </div>

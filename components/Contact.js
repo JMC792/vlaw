@@ -1,6 +1,14 @@
 import React from 'react'
+import contact_en from '../public/locales/en/contact_en'
+import contact_es from '../public/locales/es/contact_es'
+import {useRouter} from "next/router";
 
 function Contact() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? contact_en : contact_es;
+
   return (
     <div>
         {/*########################### Contact Us ########################### */}
@@ -11,12 +19,12 @@ function Contact() {
           <div class="p-12">
             {/*============= heading ============= */}
             <h1 class="text-[20px] pb-[36px] text-yellow-900 uppercase">
-              Where you can find us
+              {t.heading}
             </h1>
 
             {/*============= Title ============= */}
             <h1 class="text-[42px] font-serif pb-[36px] text-left font-medium uppercase text-slate-700">
-              Let's Talk about your future
+              {t.title}
             </h1>
 
             {/*============= List Column ============= */}
@@ -25,7 +33,7 @@ function Contact() {
                 {/*============= Address Row ============= */}
                 <div class="pt-[15px]">
                   <h3 class="font-medium text-2xl text-yellow-900 pb-2">
-                    We are located at
+                    {t.subtitle1}
                   </h3>
                   <span class="material-symbols-outlined">pin_drop</span>
                   <span class="pl-3 text-[20px]">
@@ -36,7 +44,7 @@ function Contact() {
                 {/*============= Phone Number Row ============= */}
                 <div class="pt-[20px]">
                   <h3 class="font-medium text-2xl text-yellow-900 pb-2">
-                    Our phone number
+                    {t.subtitle2}
                   </h3>
                   <span class="material-symbols-outlined">call</span>
                   <a
@@ -50,7 +58,7 @@ function Contact() {
                 {/*============= Email Row ============= */}
                 <div class="pt-[20px]">
                   <h3 class="font-medium text-2xl text-yellow-900 pb-2">
-                    Our email
+                    {t.subtitle3}
                   </h3>
                   <span class="material-symbols-outlined">mail</span>
                   <a class="pl-3 text-[20px]">julio@valentinlaw.us</a>

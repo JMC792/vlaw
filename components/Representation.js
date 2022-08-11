@@ -1,6 +1,14 @@
 import React from 'react'
+import representation_en from '../public/locales/en/representation_en'
+import representation_es from '../public/locales/es/representation_es'
+import {useRouter} from "next/router";
 
 function Representation() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? representation_en : representation_es;
+
   return (
     <div>
         {/*########################### Overview 2 ########################### */}
@@ -9,23 +17,13 @@ function Representation() {
           {/*============= Overview-Column-1 ============= */}
           <div class="lg:p-24 p-6" id="overview-col-1">
             <h3 class="text-[20px] text-center md:text-right text-slate-700 ">
-              Our Reach
+              {t.heading}
             </h3>
             <h2 class="text-[20px] lg:text-[40px] text-center md:text-right font-medium font-serif uppercase text-yellow-900">
-              Representation in 
-              <br></br>
-              50 States
+              {t.title}
             </h2>
             <p class="text-[16px] leading-[30px] pt-12 text-justify indent-8 ">
-              Since 2020, Mr. Valentin has dedicated himself to hundreds of
-              immigration matters and clients. We are proud of his proven record
-              of consistently obtaining favorable results in various matters
-              including federal actions, immigration appeals, immigration
-              trials, and matters before USCIS. We are able to represent you in
-              all 50 states, and have notably been successful in the notoriously
-              strict Eleventh and Fourth Circuit District Courts, as well as
-              actions in Georgia, North Carolina, South Carolina, Florida,
-              Alabama, and DC.
+              {t.paragraph}
             </p>
           </div>
 

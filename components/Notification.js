@@ -1,6 +1,15 @@
 import React from 'react'
+import {useRouter} from "next/router";
+import notification_en from '../public/locales/en/notification_en'
+import notification_es from '../public/locales/es/notification_es'
+
 
 function Notification() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? notification_en : notification_es;
+
   return (
     <div>
         {/*########################### Notification  ########################### */}
@@ -9,14 +18,12 @@ function Notification() {
           
           {/*============= Row 1  ============= */}
           <h1 className="md:text-[40px] text-center font-serif text-neutral-200 uppercase">
-          Let us put Our Knowledge 
-          <br></br>
-          and Experience to Work For You
+            {t.row1title}
           </h1>
 
           {/*============= Row 1  ============= */}
           <h1 className="md:text-[28px] text-center text-neutral-200 py-4">
-            *Free Consultations for a Limited Time*
+            {t.row1subtitle}
           </h1>
           {/*============= Row 2 / Buttons ============= */}
           <div class="mt-8 md:flex grid justify-center md:justify-evenly gap-y-8">
@@ -27,7 +34,7 @@ function Notification() {
                 type="button"
                 className="text-white bg-yellow-600 rounded-lg md:text-[20px] leading-[25px] px-7 py-4 w-[14rem]"
               >
-                Make a Payment
+                {t.button1}
               </button>
             </a>
 
@@ -37,7 +44,7 @@ function Notification() {
                 type="button"
                 className="text-white bg-yellow-600 rounded-lg md:text-[20px] leading-[25px] px-7 py-4 "
               >
-                Schedule a Consultation
+                {t.button2}
               </button>
             </a>
           </div>

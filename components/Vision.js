@@ -1,6 +1,14 @@
 import React from 'react'
+import {useRouter} from "next/router";
+import vision_en from "../public/locales/en/vision_en";
+import vision_es from "../public/locales/es/vision_es";
 
 function Vision() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? vision_en : vision_es;
+
   return (
     <div>
         {/*########################### Overview 1 ########################### */}
@@ -9,21 +17,13 @@ function Vision() {
           {/*============= Overview-Column-1 ============= */}
           <div class="lg:p-24 p-6" id="overview-col-1">
             <h3 class="text-[20px] text-center md:text-right text-yellow-900 uppercase">
-              Our Vision
+              {t.heading}
             </h3>
             <h2 class="text-[32px] text-center md:text-[42px] md:text-right uppercase mb-12 text-slate-700 font-serif">
-              Our commitment to You
+              {t.title}
             </h2>
             <p class="text-[16px] leading-[25px] mt-4 text-justify indent-8">
-              Valentin Law LLC is a full-service immigration law firm based in
-              Atlanta. The firm was built by immigrants and serves to help
-              immigrants navigate the ever-evolving United States immigration
-              system. We represent individuals in all matters of immigration
-              proceedings ranging from cases in immigration court, USCIS
-              proceedings, federal litigation and even family law -as related to
-              immigration. Coming from humble beginnings, and migrant
-              backgrounds, we understand the issues immigrants face in such a
-              complex judicial system.
+              {t.paragraph}
             </p>
           </div>
 

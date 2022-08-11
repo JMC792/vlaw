@@ -1,6 +1,14 @@
 import React from 'react'
+import {useRouter} from "next/router";
+import practices_en from '../public/locales/en/practices_en'
+import practices_es from '../public/locales/es/practices_es'
 
 function Practices() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? practices_en : practices_es;
+
   return (
     <div>
         {/*########################### Practice Areas ########################### */}
@@ -12,10 +20,10 @@ function Practices() {
           <div class="text-neutral-900 py-12">
             {/*============= Row-1 ============= */}
             <h3 className="text-[24px] text-center font-medium font-serif uppercase text-yellow-900">
-              we're here to help
+              {t.heading}
             </h3>
             <h1 class="text-[60px] text-center font-medium font-serif uppercase pt-4 text-slate-800">
-              Know Your Rights
+              {t.title}
             </h1>
 
             {/*============= Row-2 ============= */}

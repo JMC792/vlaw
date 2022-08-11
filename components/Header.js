@@ -1,6 +1,14 @@
 import React from 'react'
+import {useRouter} from "next/router";
+import hero from '../public/locales/en/hero_en'
+import heroe from '../public/locales/es/hero_es'
 
 function Header() {
+
+  const router = useRouter();
+  const {locale} = router;
+  const t = locale === 'en' ? hero : heroe;
+
   return (
     <div>
       {/*########################### Header ###########################*/}
@@ -21,7 +29,7 @@ function Header() {
 
               {/*============= Row 2 / Subtitle ============= */}
               <h3 class="text-[14px] md:text-[25px] mt-[12px] text-slate-700 font-serif uppercase">
-                "Immigration for All"
+                {t.slogan}
               </h3>
 
               
