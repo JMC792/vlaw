@@ -91,6 +91,15 @@ function Navbar() {
                 </div>
               </div>
 
+              <div className="hidden lg:flex">
+                <a
+                    className="text-[20px] font-medium text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
+                    href={t.page}
+                >
+                  {t.button6}
+                </a>
+              </div>
+
               {/*----------------------- Column 3 ----------------------- */}
               <div class="text-neutral-200 hover:text-yellow-900 transition-colors delay-100 font-bold">
               <i class="fa-solid fa-phone"></i>
