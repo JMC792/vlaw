@@ -2,14 +2,14 @@ import {Fragment} from 'react'
 import Head from "next/head";
 import Navbar from "@components/Navbar/Navbar";
 import Header from "@components/Header";
-import About from "@components/About";
-import Testimonials from "@components/Testimonials";
+import About from "@components/About/About";
+import Testimonials from "@components/Testimonials/Testimonials";
 import Topbar from "@components/Topbar";
 import Notification from "@components/Notification";
-import Vision from "@components/Vision";
-import Practices from "@components/Practices";
-import Representation from "@components/Representation";
-import Contact from "@components/Contact";
+import Vision from "@components/Vision/Vision";
+import Practices from "@components/Practice/Practices";
+import Representation from "@components/Representation/Representation";
+import Contact from "@components/Contact/Contact";
 import Footer from "@components/Footer";
 
 export default function Home() {

@@ -4,6 +4,6 @@ module.exports = {
     button3 : 'About' ,
     button4 : 'Testimonials' ,
     button5 : 'Contact Us' ,
-    button6: 'Spanish',
+    button6: 'Español',
     page: '/es'
 }
