@@ -6,6 +6,8 @@ import {OffcanvasData} from './offcanvas-data'
 import {useRouter} from "next/router";
 import navbar_en from '../../public/locales/en/navbar_en'
 import navbar_es from '../../public/locales/es/navbar_es'
+import Topbar from "@components/Topbar";
+import Logo from "@components/Navbar/Logo";
 
 function Navbar() {
 
@@ -30,11 +32,11 @@ function Navbar() {
     });
 
     const isSticky = (e) => {
-        const navbar = document.querySelector('.z-40');
+        const navbar = document.querySelector('.header-selection');
         const scrollTop = window.scrollY;
         scrollTop >= 250
-            ? navbar.classList.add('sticky')
-            : navbar.classList.remove('sticky');
+            ? navbar.classList.add('is-sticky')
+            : navbar.classList.remove('is-sticky');
     };
 
 
@@ -42,88 +44,94 @@ function Navbar() {
     }
     return (
         <Fragment>
-            <nav className="py-2 z-40 bg-slate-700 top-0" id="#navbar">
-                <div className="z-50 container mx-auto">
-                    <div className="flex flex-nowrap items-center justify-between">
-                        {/*----------------------- Column 1 / Logo ----------------------- */}
-                        <a href="#header" className="">
-                            <h1 className="text-2xl font-medium font-serif text-neutral-200">Valentin Law</h1>
-                        </a>
+            {/*----------------------- TopBar ----------------------- */}
 
-                        {/*----------------------- Column 2 ----------------------- */}
-                        <div className="hidden lg:flex gap-x-6" id="navbar-links">
-                            <div>
-                                <a
-                                    className="text-[20px] text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
-                                    href="#vision"
-                                >
-                                    {t.button1}
-                                </a>
-                            </div>
-                            <div>
-                                <a
-                                    className="text-[20px] text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
-                                    href="#practice-area"
-                                >
-                                    {t.button2}
-                                </a>
-                            </div>
-                            <div>
-                                <a
-                                    className="text-[20px] text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
-                                    href="#about"
-                                >
-                                    {t.button3}
-                                </a>
-                            </div>
-                            <div>
-                                <a
-                                    className="text-[20px] text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
-                                    href="#testimonials"
-                                >
-                                    {t.button4}
-                                </a>
-                            </div>
-                            <div>
-                                <a
-                                    className="text-[20px] text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
-                                    href="#contact-us"
-                                >
-                                    {t.button5}
-                                </a>
-                            </div>
-                        </div>
 
-                        <div className="hidden lg:flex">
-                            <a
-                                className="text-[20px] text-neutral-200 hover:text-yellow-900 transition-colors delay-100"
-                                href={t.page}
-                            >
-                                {t.button6}
-                            </a>
-                        </div>
+            {/*----------------------- Desktop Nav ----------------------- */}
+            <nav className="absolute w-full z-10 top-0" id="#navbar">
+                <Topbar/>
+                <div className="header-selection sticky-style-1 pt-4">
+                    <div className="container mx-auto">
+                        <div className="flex flex-nowrap items-center justify-between">
+                            {/*----------------------- Column 1 / Logo ----------------------- */}
+                            <Logo/>
 
-                        {/*----------------------- Column 3 ----------------------- */}
-                        <div className="text-neutral-200 hover:text-yellow-900 transition-colors delay-100">
-                            <i className="fa-solid fa-phone"></i>
-                            <span className="ml-2 text-center">Contact Us:</span>
-                            <br></br>
-                            <a href="tel: 404-919-0443" className="text-center">
-                                (+1) 404-919-0443{" "}
-                            </a>
-                        </div>
+                            {/*----------------------- Column 2 ----------------------- */}
+                            <div className="hidden lg:flex gap-x-6" id="navbar-links">
+                                <div>
+                                    <a
+                                        className="text-[20px] text-yellow-500 hover:text-yellow-900 transition-colors delay-100"
+                                        href="#vision"
+                                    >
+                                        {t.button1}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        className="text-[20px] text-yellow-500 hover:text-yellow-900 transition-colors delay-100"
+                                        href="#practice-area"
+                                    >
+                                        {t.button2}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        className="text-[20px] text-yellow-500 hover:text-yellow-900 transition-colors delay-100"
+                                        href="#about"
+                                    >
+                                        {t.button3}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        className="text-[20px] text-yellow-500 hover:text-yellow-900 transition-colors delay-100"
+                                        href="#testimonials"
+                                    >
+                                        {t.button4}
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        className="text-[20px] text-yellow-500 hover:text-yellow-900 transition-colors delay-100"
+                                        href="#contact-us"
+                                    >
+                                        {t.button5}
+                                    </a>
+                                </div>
+                            </div>
 
-                        {/*----------------------- Column 4 ----------------------- */}
-                        <div className="hidden xs:flex">
-                            <a href="#" className="text-neutral-200" id="toggle-button">
-                                <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
-                            </a>
+                            <div className="hidden lg:flex">
+                                <a
+                                    className="text-[20px] text-yellow-500 hover:text-yellow-900 transition-colors delay-100"
+                                    href={t.page}
+                                >
+                                    {t.button6}
+                                </a>
+                            </div>
+
+                            {/*----------------------- Column 3 ----------------------- */}
+                            <div className="text-yellow-500 hover:text-yellow-900 transition-colors delay-100">
+                                <i className="fa-solid fa-phone"></i>
+                                <span className="ml-2 text-center">Contact Us:</span>
+                                <br></br>
+                                <a href="tel: 404-919-0443" className="text-center">
+                                    (+1) 404-919-0443{" "}
+                                </a>
+                            </div>
+
+                            {/*----------------------- Column 4 ----------------------- */}
+                            <div className="hidden xs:flex">
+                                <a href="#" className="text-yellow-500" id="toggle-button">
+                                    <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </nav>
 
-            {/*----------------------- Column 4 ----------------------- */}
+            {/*----------------------- Mobile Nav ----------------------- */}
             <div className={offcanvas ? "offcanvas-menu-wrap active" : "offcanvas-menu-wrap"}>
                 <nav className="offcanvas-menu z-50">
                     <ul className="offcanvas-menu-items" onClick={showOffcanvas}>

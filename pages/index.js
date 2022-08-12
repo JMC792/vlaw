@@ -1,7 +1,7 @@
 import {Fragment} from 'react'
 import Head from "next/head";
 import Navbar from "@components/Navbar/Navbar";
-import Header from "@components/Header";
+import Hero from "@components/Hero/Hero";
 import About from "@components/About/About";
 import Testimonials from "@components/Testimonials/Testimonials";
 import Topbar from "@components/Topbar";
@@ -27,9 +27,8 @@ export default function Home() {
           crossorigin="anonymous"
         ></script>
         </head>
-        <Topbar/>
         <Navbar/>
-        <Header/>
+        <Hero/>
         <Notification/>
         <Vision/>
         <Practices/>
