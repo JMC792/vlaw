@@ -8,7 +8,6 @@ function Vision() {
 
   return (
     <Fragment>
-        {/*########################### Overview 1 ########################### */}
       <section class="py-[60px] bg-back-8 bg-cover" id="vision">
         <div class="container mx-auto grid lg:grid-cols-2">
           <VisionText/>

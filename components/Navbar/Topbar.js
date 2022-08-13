@@ -1,7 +1,7 @@
 import React from 'react'
 import {useRouter} from "next/router";
-import topbar_en from '../public/locales/en/topbar_en'
-import topbar_es from '../public/locales/es/topbar_es'
+import topbar_en from '../../public/locales/en/topbar_en'
+import topbar_es from '../../public/locales/es/topbar_es'
 
 function Topbar() {
 

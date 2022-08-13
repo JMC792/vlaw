@@ -13,8 +13,8 @@ function TestimonialItems() {
                 {testimonialData.map((item,index) => {
                     return (
                         <div key={index} className="rounded-xl bg-neutral-200 m-4">
-                            <blockquote className="p-12">
-                                <h3 className="text-xl font-bold py-2">
+                            <div className="p-12 rounded-xl">
+                                <h3 className="text-xl font-bold py-2 uppercase">
                                     {item.title}
                                 </h3>
                                 <p className="py-2">
@@ -24,7 +24,7 @@ function TestimonialItems() {
                                     <div>Posted by {item.name} (Avvo)</div>
                                     <div>{item.date}</div>
                                 </div>
-                            </blockquote>
+                            </div>
                         </div>
                     )
                 })}

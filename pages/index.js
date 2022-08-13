@@ -4,7 +4,7 @@ import Navbar from "@components/Navbar/Navbar";
 import Hero from "@components/Hero/Hero";
 import About from "@components/About/About";
 import Testimonials from "@components/Testimonials/Testimonials";
-import Topbar from "@components/Topbar";
+import Topbar from "@components/Navbar/Topbar";
 import Notification from "@components/Notification";
 import Vision from "@components/Vision/Vision";
 import Practices from "@components/Practice/Practices";
