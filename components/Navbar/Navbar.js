@@ -46,10 +46,10 @@ function Navbar() {
         <Fragment>
 
             {/*----------------------- Desktop Nav ----------------------- */}
-            <nav className="absolute w-full z-10 top-0" id="#navbar">
+            <nav className="bg-slate-800 w-full z-10 top-0" id="#navbar">
                 {/*----------------------- TopBar ----------------------- */}
                 <Topbar/>
-                <div className="header-selection sticky-style-1 pt-4">
+                <div className="header-selection sticky-style-1 py-4">
                     <div className="container mx-auto">
                         <div className="flex flex-nowrap items-center justify-between">
                             {/*----------------------- Logo ----------------------- */}
