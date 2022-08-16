@@ -1,3 +1,3 @@
 module.exports = {
-    slogan: 'Immigracion para todos'
+    slogan: 'Inmigracion para todos'
 }

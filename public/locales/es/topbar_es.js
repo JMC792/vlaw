@@ -1,4 +1,4 @@
 module.exports = {
     telephone: 'Telefono:',
-    socials: 'Visite nuestro redes:'
+    socials: 'Visite a nuestra redes:'
 }
