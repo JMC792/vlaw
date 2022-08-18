@@ -30,7 +30,7 @@ export const OffcanvasData = [
         cName: 'offcanvas-text',
     },
     {
-        title: 'Espanol',
+        title: 'Español',
         path: '/es',
         cName: 'offcanvas-text',
     },
