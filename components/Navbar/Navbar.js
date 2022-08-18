@@ -137,14 +137,9 @@ function Navbar() {
                         <li className="navbar-toggle flex justify-between items-center pb-[15px]">
                             <div className="logo">
                                 <Link href="/">
-                                    <a>
-                                        <Image
-                                            src="/logo.png"
-                                            alt="Logo"
-                                            width={70}
-                                            height={70}
-                                        />
-                                    </a>
+                                    <h1 className='text-2xl text-slate-800'>
+                                        Valentin Law LLC
+                                    </h1>
                                 </Link>
                             </div>
                             <button
