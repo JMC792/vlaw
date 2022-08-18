@@ -113,7 +113,7 @@ function Navbar() {
                             <div className=" lg:block text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
                                 <a href="tel: 404-919-0443" className="text-center">
                                     <i className="fa-solid fa-phone"></i>
-                                        <span className="ml-2 text-center ">Contact Us:</span>
+                                        <span className="ml-2 text-center ">{t.button5}</span>
                                             <div>404-919-0443</div>
                                 </a>
                             </div>
