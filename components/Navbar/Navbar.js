@@ -110,12 +110,11 @@ function Navbar() {
                             </div>
 
                             {/*----------------------- Contact Us ----------------------- */}
-                            <div className="hidden lg:block text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
-                                <i className="fa-solid fa-phone"></i>
-                                <span className="ml-2 text-center">Contact Us:</span>
-                                <br></br>
+                            <div className=" lg:block text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
                                 <a href="tel: 404-919-0443" className="text-center">
-                                    (+1) 404-919-0443{" "}
+                                    <i className="fa-solid fa-phone"></i>
+                                        <span className="ml-2 text-center ">Contact Us:</span>
+                                            <div>404-919-0443</div>
                                 </a>
                             </div>
 
