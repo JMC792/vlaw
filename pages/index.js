@@ -10,7 +10,7 @@ import Vision from "@components/Vision/Vision";
 import Practices from "@components/Practice/Practices";
 import Representation from "@components/Representation/Representation";
 import Contact from "@components/Contact/Contact";
-import Footer from "@components/Footer";
+import Footer from "@components/Layout/Footer";
 
 export default function Home() {
   return (
