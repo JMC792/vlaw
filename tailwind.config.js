@@ -10,7 +10,7 @@ module.exports = {
         'xs': '375px',
       },
       backgroundImage: {
-        'back-1' : "url('..//public/statue.jpeg')",
+        'back-1' : "url('..//public/artboard3.jpg')",
         'back-2' : "url('..//public/blue-bg.jpg')",
         'back-3' : "url('..//public/law_background.jpg')",
         'back-4' : "url('..//public/new-york.jpg')",
