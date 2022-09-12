@@ -7,9 +7,9 @@ function Contact() {
   return (
     <div>
         {/*########################### Contact Us ########################### */}
-      <section class="py-[20px] bg-back-7 bg-cover" id="contact-us">
+      <section className="py-[20px] bg-back-7 bg-cover" id="contact-us">
         {/*============= Container ============= */}
-        <div class="grid lg:grid-cols-2 ">
+        <div className="grid lg:grid-cols-2 ">
           {/*============= Left Column ============= */}
           <ContactText/>
 

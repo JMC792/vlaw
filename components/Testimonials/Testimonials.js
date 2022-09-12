@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 import testimonials_en from '../../public/locales/en/testimonials_en'
 import testimonials_es from '../../public/locales/es/testimonials_es'
 import {useRouter} from "next/router";
@@ -26,6 +27,22 @@ function Testimonials() {
 
           {/*============= Testimonial-Row 2 ============= */}
           <TestimonialItems/>
+
+          {/*============= Testimonial-Row 3 ============= */}
+          <div className="pt-10">
+            <div className="flex justify-center">
+              <Link href="https://www.avvo.com/attorneys/30309-ga-julio-valentin-5140996.html#client_reviews">
+                <button
+                    type="button"
+                    className="text-white bg-yellow-600 rounded-lg md:text-[20px] leading-[25px] px-7 py-4 w-[14rem]"
+                >
+                  More Reviews
+                </button>
+              </Link>
+            </div>
+          </div>
+
+
         </div>
       </section>
     </div>

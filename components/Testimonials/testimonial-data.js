@@ -1,5 +1,23 @@
 export const testimonialData = [
     {
+        title: 'Excellent Litigator',
+        paragraph: 'Julio Valentin is an exceptional attorney and an even better litigator! Julio epitomizes integrity and dedication when representing his clients. Highly recommend!',
+        name: 'Fernando',
+        date: 'August 31, 2022'
+    },
+    {
+        title: 'Amazing Lawyer',
+        paragraph: 'Mr. Valentin is a fantastic lawyer. He explains the process in a clear way, gives you clear instructions on what is to happen, provides transparency and and availability through every step, and makes sure to go the extra mile so you get the best outcome. Incredibly thankful for your work, for our outcome, and glad I found this firm',
+        name: 'Jesus Chavez',
+        date: 'August 18, 2022'
+    },
+    {
+        title: 'knowledgeable and compassionate ',
+        paragraph: 'Julio handled my TPS case recently. He had advised me on some other USCIS updates before and I finally decided to move my case over to his firm. He is very knowledgeable and always goes the extra mile to keep me In the loop of all possible paths with my process. If you want better customer service and someone who cares as much as you do about the process I’d highly recommend going with Valentin Law.',
+        name: 'Carlos',
+        date: 'July 19, 2022'
+    },
+    {
         title: 'BEST IMMIGRATION LAWYER IN ATLANTA GA',
         paragraph: 'Julio was great ! Handle our case very well and was very patient with us ! I would love to post our picture on here but I can’t! Julio, continue to be the best lawyer you can be and bless someone else like you bless My husband and I',
         name: 'Joseph',
@@ -25,34 +43,5 @@ export const testimonialData = [
             '                            case!',
         name: 'Franklin',
         date: 'May 12, 2022'
-    },
-    {
-        title: 'Caring Lawyer',
-        paragraph: 'One thing I truly loved was that Julio listened to me and was\n' +
-            '                            personable in my conversation with him. He offers personal\n' +
-            '                            care that many big law firms don’t. Thank you Julio for caring\n' +
-            '                            about me as a person and for taking delicate care of my\n' +
-            '                            case.Finally after a year fighting our immigration court case.',
-        name: 'Anonymous',
-        date: 'July 12, 2022'
-    },
-    {
-        title: 'Thanks from the bottom of my heart',
-        paragraph: 'Julio is an amazing lawyer who take my nephew Michael and his\n' +
-            '                            family case with an amazing dedication ; he always being very\n' +
-            '                            profesional and very dedicated and courteous . Highly\n' +
-            '                            recommended . Thank you so much Julio to make my family happy',
-        name: 'Blanca',
-        date: 'April 27, 2022'
-    },
-    {
-        title: 'Incredible, just incredible',
-        paragraph: 'Julio is an incredibly talented lawyer. He handled my case in\n' +
-            '                            immigration court with extreme diligence, poise, and tact.\n' +
-            '                            Ultimately, he saved my family and I from being removed from\n' +
-            '                            the country to our home country- where we would inevitably\n' +
-            '                            live in fear. Thank you, just thank you',
-        name: 'Stephen',
-        date: 'April 27, 2022'
-    },
+    }
 ]
