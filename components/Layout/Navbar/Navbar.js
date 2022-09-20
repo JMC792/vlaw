@@ -4,10 +4,10 @@ import Image from 'next/image'
 import {useState, useEffect, Fragment} from 'react';
 import {OffcanvasData} from './offcanvas-data'
 import {useRouter} from "next/router";
-import navbar_en from '../../public/locales/en/navbar_en'
-import navbar_es from '../../public/locales/es/navbar_es'
-import Topbar from "@components/Navbar/Topbar";
-import Logo from "@components/Navbar/Logo";
+import navbar_en from '../../../public/locales/en/navbar_en'
+import navbar_es from '../../../public/locales/es/navbar_es'
+import Topbar from "@components/Layout/Navbar/Topbar";
+import Logo from "@components/Layout/Navbar/Logo";
 
 function Navbar() {
 
@@ -60,7 +60,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#vision"
+                                        href="@components/Layout/Navbar/Navbar#vision"
                                     >
                                         {t.button1}
                                     </a>
@@ -68,7 +68,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#practice-area"
+                                        href="@components/Layout/Navbar/Navbar#practice-area"
                                     >
                                         {t.button2}
                                     </a>
@@ -76,7 +76,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#about"
+                                        href="@components/Layout/Navbar/Navbar#about"
                                     >
                                         {t.button3}
                                     </a>
@@ -84,7 +84,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#testimonials"
+                                        href="@components/Layout/Navbar/Navbar#testimonials"
                                     >
                                         {t.button4}
                                     </a>
@@ -92,7 +92,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#contact-us"
+                                        href="@components/Layout/Navbar/Navbar#contact-us"
                                     >
                                         {t.button5}
                                     </a>
@@ -120,7 +120,7 @@ function Navbar() {
 
                             {/*----------------------- Off-canvas Menu ----------------------- */}
                             <div className="xs:flex">
-                                <a href="#" className="text-yellow-700" id="toggle-button">
+                                <a href="@components/Layout/Navbar/Navbar#" className="text-yellow-700" id="toggle-button">
                                     <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
                                 </a>
                             </div>
@@ -136,7 +136,7 @@ function Navbar() {
                     <ul className="offcanvas-menu-items" onClick={showOffcanvas}>
                         <li className="navbar-toggle flex justify-between items-center pb-[15px]">
                             <div className="logo">
-                                <Link href="/">
+                                <Link href="/pages">
                                     <h1 className='text-2xl text-slate-800'>
                                         Valentin Law LLC
                                     </h1>
