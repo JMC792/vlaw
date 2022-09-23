@@ -5,7 +5,7 @@ import About from "@components/About/About";
 import Testimonials from "@components/Testimonials/Testimonials";
 import Topbar from "@components/Layout/Navbar/Topbar";
 import Notification from "@components/Notification";
-import Vision from "@components/Vision/Vision";
+import Vision from "@components/Vision";
 import Practices from "@components/Practice/Practices";
 import Representation from "@components/Representation/Representation";
 import Contact from "@components/Contact/Contact";
