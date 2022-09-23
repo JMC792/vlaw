@@ -1,6 +1,5 @@
 import {Fragment} from 'react'
 import Head from "next/head";
-import Navbar from "@components/Layout/Navbar/Navbar";
 import Hero from "@components/Hero/Hero";
 import About from "@components/About/About";
 import Testimonials from "@components/Testimonials/Testimonials";
@@ -10,7 +9,6 @@ import Vision from "@components/Vision/Vision";
 import Practices from "@components/Practice/Practices";
 import Representation from "@components/Representation/Representation";
 import Contact from "@components/Contact/Contact";
-import Footer from "@components/Layout/Footer";
 
 export default function Home() {
   return (
