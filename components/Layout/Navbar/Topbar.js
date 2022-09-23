@@ -1,7 +1,7 @@
 import React from 'react'
 import {useRouter} from "next/router";
-import topbar_en from '../../public/locales/en/topbar_en'
-import topbar_es from '../../public/locales/es/topbar_es'
+import topbar_en from '../../../public/locales/en/topbar_en'
+import topbar_es from '../../../public/locales/es/topbar_es'
 
 function Topbar() {
 
@@ -40,7 +40,7 @@ function Topbar() {
             <div class="flex gap-x-4">
               <span class="text-neutral-200">{t.socials} </span>
               <a
-                href="https://www.instagram.com/atlimmigration/"
+                href="@components/Layout/Navbar/Topbar"
                 class="text-yellow-600"
               >
                 <i class="fa-brands fa-instagram fa-xl"></i>

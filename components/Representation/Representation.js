@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react'
 import RepresentationText from "@components/Representation/representation-text";
 import RepresentationImage from "@components/Representation/representation-image";
+import Image from "next/image";
+import newYork from "public/new-york.jpg"
 
 function Representation() {
 
@@ -14,7 +16,11 @@ function Representation() {
           <RepresentationText/>
 
           {/*============= Overview-Column-2 ============= */}
-          <RepresentationImage/>
+          <Image
+              src={newYork}
+              layout={"intrinsic"}
+              className={"rounded-xl"}
+          />
         </div>
       </section>
     </Fragment>

@@ -6,8 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'xs': '375px',
+      theme: {
+        padding : '1.5rem'
+      },
+        screens: {
+          'xs': '375px',
       },
       backgroundImage: {
         'back-1' : "url('..//public/artboard3.jpg')",
