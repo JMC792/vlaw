@@ -16,11 +16,14 @@ function Representation() {
           <RepresentationText/>
 
           {/*============= Overview-Column-2 ============= */}
-          <Image
-              src={newYork}
-              layout={"intrinsic"}
-              className={"rounded-xl"}
-          />
+          <div className={"hidden md:grid"}>
+              <Image
+                  src={newYork}
+                  layout={"intrinsic"}
+                  className={"rounded-xl"}
+              />
+          </div>
+
         </div>
       </section>
     </Fragment>
