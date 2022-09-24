@@ -60,7 +60,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="@components/Layout/Navbar/Navbar#vision"
+                                        href="#vision"
                                     >
                                         {t.button1}
                                     </a>
@@ -68,7 +68,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="@components/Layout/Navbar/Navbar#practice-area"
+                                        href="#practice-area"
                                     >
                                         {t.button2}
                                     </a>
@@ -76,7 +76,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="@components/Layout/Navbar/Navbar#about"
+                                        href="#about"
                                     >
                                         {t.button3}
                                     </a>
@@ -84,7 +84,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="@components/Layout/Navbar/Navbar#testimonials"
+                                        href="#testimonials"
                                     >
                                         {t.button4}
                                     </a>
@@ -92,7 +92,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="@components/Layout/Navbar/Navbar#contact-us"
+                                        href="#contact-us"
                                     >
                                         {t.button5}
                                     </a>
@@ -120,7 +120,7 @@ function Navbar() {
 
                             {/*----------------------- Off-canvas Menu ----------------------- */}
                             <div className="xs:flex">
-                                <a href="@components/Layout/Navbar/Navbar#" className="text-yellow-700" id="toggle-button">
+                                <a href="#" className="text-yellow-700" id="toggle-button">
                                     <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
                                 </a>
                             </div>
