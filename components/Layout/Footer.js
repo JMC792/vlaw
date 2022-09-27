@@ -2,14 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" bg-slate-800 shadow md:px-6 md:py-16 dark:bg-gray-800">
+    <footer className=" bg-slate-800 shadow py-14 md:px-6 md:py-16 dark:bg-gray-800">
       <div className="container mx-auto">
         
         {/* Row 1 margin and padding */}
-        <div className="py-20 px-4">
+        <div className="px-4">
           {/* Grid templating*/}
           <div className="grid gap-x-24 gap-y-20 sm:items-center lg:flex text-white">
-
             {/* Information */}
             <div className="basis-1/4 grid gap-y-8">
               {/* Title */}
@@ -22,16 +21,13 @@ export default function Footer() {
               </div>
               {/* Contact Information*/}
               <div className="grid gap-y-4 text-white">
-
                 {/* Phone Number */}
                 <div className="flex gap-x-2 hover:text-neutral-300">
                   <div className={"flex gap-x-2 cursor-pointer"}>
                     <div className="material-symbols-outlined">call</div>
                     <Link href="tel: 404-919-0443">(404)-919-0443</Link>
                   </div>
-
                 </div>
-
                 {/* Email */}
                 <div className="flex gap-x-2 hover:text-neutral-300">
                   <div className={"flex gap-x-2 cursor-pointer"}>
@@ -40,16 +36,13 @@ export default function Footer() {
                   </div>
 
                 </div>
-
                 {/* Address */}
                 <div className="flex gap-x-2 hover:text-neutral-300">
-
                   <Link href="https://goo.gl/maps/dZ4bivM4GiEe7JrU7">
                     <div className={"flex gap-x-2 cursor-pointer"}>
                       <span className="material-symbols-outlined">location_on</span>
                       <div>1201 West Peachtree Street NW Suite 2300, Atlanta GA, 30309</div>
                     </div>
-
                   </Link>
                 </div>
 

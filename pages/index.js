@@ -7,7 +7,7 @@ import Topbar from "@components/Layout/Navbar/Topbar";
 import Notification from "@components/Notification";
 import Vision from "@components/Vision";
 import Practices from "@components/Practice/Practices";
-import Representation from "@components/Representation/Representation";
+import Representation from "@components/Representation";
 import Contact from "@components/Contact/Contact";
 
 export default function Home() {
