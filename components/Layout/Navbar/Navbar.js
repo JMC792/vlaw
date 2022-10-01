@@ -86,7 +86,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="/posts"
+                                        href="#testimonials"
                                     >
                                         {t.button4}
                                     </a>
