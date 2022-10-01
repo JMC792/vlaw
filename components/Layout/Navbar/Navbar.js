@@ -1,13 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import {useState, useEffect, Fragment} from 'react';
 import {OffcanvasData} from './offcanvas-data'
 import {useRouter} from "next/router";
 import navbar_en from '../../../public/locales/en/navbar_en'
 import navbar_es from '../../../public/locales/es/navbar_es'
 import Topbar from "@components/Layout/Navbar/Topbar";
-import logo from "public/logo.svg"
 
 function Navbar() {
 
