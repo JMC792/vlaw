@@ -7,7 +7,7 @@ import {useRouter} from "next/router";
 import navbar_en from '../../../public/locales/en/navbar_en'
 import navbar_es from '../../../public/locales/es/navbar_es'
 import Topbar from "@components/Layout/Navbar/Topbar";
-import Logo from "@components/Layout/Navbar/Logo";
+import logo from "public/logo.svg"
 
 function Navbar() {
 
@@ -53,7 +53,9 @@ function Navbar() {
                     <div className="container mx-auto">
                         <div className="flex flex-nowrap items-center justify-between">
                             {/*----------------------- Logo ----------------------- */}
-                            <Logo/>
+                            <Link href={"/"}>
+                                <h1 className="text-2xl font-medium font-serif text-yellow-700 hover:text-yellow-600 transition-colors delay-100 cursor-pointer">Valentin Law</h1>
+                            </Link>
 
                             {/*----------------------- Link list ----------------------- */}
                             <div className="hidden lg:flex gap-x-6" id="navbar-links">
@@ -84,7 +86,7 @@ function Navbar() {
                                 <div>
                                     <a
                                         className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#testimonials"
+                                        href="/posts"
                                     >
                                         {t.button4}
                                     </a>
