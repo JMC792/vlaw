@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react'
 import Image from "next/image";
-import newYork from "public/new-york.jpg"
+import newYork from "public/images/new-york.jpg"
 import {useRouter} from "next/router";
-import representation_en from "../public/locales/en/representation_en";
-import representation_es from "../public/locales/es/representation_es";
+import representation_en from "../../public/locales/en/representation_en";
+import representation_es from "../../public/locales/es/representation_es";
 
 function Representation() {
 

@@ -1,17 +1,22 @@
-import React, {Fragment} from "react";
+import React from 'react'
 import Link from "next/link";
-import {useRouter} from "next/router";
 import contact_en from "../../public/locales/en/contact_en";
 import contact_es from "../../public/locales/es/contact_es";
+import {useRouter} from "next/router";
 
-function ContactText() {
+function Contact() {
 
     const router = useRouter();
     const {locale} = router;
     const t = locale === 'en' ? contact_en : contact_es;
 
-    return (
-        <Fragment>
+  return (
+    <div>
+        {/*########################### Contact Us ########################### */}
+      <section className="py-[20px] bg-back-7 bg-cover" id="contact-us">
+        {/*============= Container ============= */}
+        <div className="grid lg:grid-cols-2 ">
+          {/*============= Left Column ============= */}
             <div className="p-12">
                 {/*============= heading ============= */}
                 <h1 className="text-[20px] pb-[36px] text-yellow-900 uppercase">
@@ -39,7 +44,7 @@ function ContactText() {
                                         <div className="hover:text-blue-500 cursor-pointer">
                                             1201 West Peachtree Street NW Suite 2300, Atlanta GA, 30309
                                         </div>
-                                     </Link>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -78,8 +83,21 @@ function ContactText() {
                     </div>
                 </div>
             </div>
-        </Fragment>
-    )
+
+          {/*============= Map ============= */}
+            <div className="bg-neutral-800">
+                <iframe
+                    className="w-full h-[500px] md:h-full"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.9759958007053!2d-84.38945188448464!3d33.7871180391018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045b68f00001%3A0x2d61f5aaa5b38f55!2s1201%20W%20Peachtree%20St%20NW%20Suite%3A%202300%2C%20Atlanta%2C%20GA%2030309!5e0!3m2!1sen!2sus!4v1656719326720!5m2!1sen!2sus"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+      </section>
+    </div>
+  )
 }
 
-export default ContactText
+export default Contact

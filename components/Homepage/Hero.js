@@ -1,17 +1,25 @@
-import React, {Fragment} from "react";
+import React, {Fragment} from 'react'
 import {useRouter} from "next/router";
 import hero from "../../public/locales/en/hero_en";
 import heroe from "../../public/locales/es/hero_es";
 
-function HeroText() {
+function Hero() {
 
     const router = useRouter();
     const {locale} = router;
     const t = locale === 'en' ? hero : heroe;
 
-    return (
-        <Fragment>
-            {/*============= Hero-Column-2 ============= */}
+  return (
+    <Fragment>
+      {/*########################### Hero ###########################*/}
+      <header className="bg-back-1 bg-cover bg-no-repeat h-screen" id="header">
+        {/*============= Container ============= */}
+        <div className="container mx-auto grid lg:grid-cols-2">
+
+            {/* Empty Column */}
+            <div className=""></div>
+
+            {/* Hero Text */}
             <div className="p-12 text-shadow">
                 <div className="font-sans text-left pt-[200px] lg:pt-[100px]">
                     {/*============= Row 1 / Title============= */}
@@ -25,8 +33,11 @@ function HeroText() {
                     </h3>
                 </div>
             </div>
-        </Fragment>
-    )
+
+        </div>
+      </header>
+    </Fragment>
+  )
 }
 
-export default HeroText
+export default Hero

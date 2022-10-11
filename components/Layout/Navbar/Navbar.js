@@ -57,21 +57,13 @@ function Navbar() {
 
                             {/*----------------------- Link list ----------------------- */}
                             <div className="hidden lg:flex gap-x-6" id="navbar-links">
-                                <div>
-                                    <a
-                                        className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#vision"
-                                    >
-                                        {t.button1}
-                                    </a>
+
+                                {/* Posts Link */}
+                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                    <Link href="/posts">{t.button1}</Link>
                                 </div>
-                                <div>
-                                    <a
-                                        className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#practice-area"
-                                    >
-                                        {t.button2}
-                                    </a>
+                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                    <Link href="#practice-area">{t.button2}</Link>
                                 </div>
                                 <div>
                                     <a

@@ -1,7 +1,7 @@
 import React from 'react'
 import {useRouter} from "next/router";
-import notification_en from '../public/locales/en/notification_en'
-import notification_es from '../public/locales/es/notification_es'
+import notification_en from '../../public/locales/en/notification_en'
+import notification_es from '../../public/locales/es/notification_es'
 
 
 function Notification() {

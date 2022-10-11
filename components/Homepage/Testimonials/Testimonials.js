@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from "next/link";
-import testimonials_en from '../../public/locales/en/testimonials_en'
-import testimonials_es from '../../public/locales/es/testimonials_es'
+import testimonials_en from '../../../public/locales/en/testimonials_en'
+import testimonials_es from '../../../public/locales/es/testimonials_es'
 import {useRouter} from "next/router";
-import TestimonialItems from "@components/Testimonials/testimonials-items";
+import TestimonialItems from "@components/Homepage/Testimonials/testimonials-items";
 
 function Testimonials() {
 

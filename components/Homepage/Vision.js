@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react'
 import Image from "next/image";
-import immigrationGIrl from "public/immigration-girl.jpg"
+import immigrationGIrl from "public/images/immigration-girl.jpg"
 import {useRouter} from "next/router";
-import vision_en from "../public/locales/en/vision_en";
-import vision_es from "../public/locales/es/vision_es";
+import vision_en from "../../public/locales/en/vision_en";
+import vision_es from "../../public/locales/es/vision_es";
 
 function Vision() {
 
