@@ -1,15 +1,15 @@
 import React from 'react'
 import {useRouter} from "next/router";
-import practices_en from '../../../public/locales/en/practices_en'
-import practices_es from '../../../public/locales/es/practices_es'
 import {practiceData} from "@components/Homepage/Practice/practice-data";
 import {practiceDataEs} from "@components/Homepage/Practice/practice-data-es";
+import indexPageEnglish from "../../../public/locales/en/index-page";
+import indexPageSpanish from "../../../public/locales/es/index-page";
 
 function Practices() {
 
   const router = useRouter();
   const {locale} = router;
-  const t = locale === 'en' ? practices_en : practices_es;
+  const t = locale === 'en' ? indexPageEnglish : indexPageSpanish;
 
   const v = locale === 'en' ? practiceData : practiceDataEs
 
@@ -22,10 +22,10 @@ function Practices() {
 
             {/* Title */}
             <h3 className="text-[24px] text-center font-medium font-serif uppercase text-yellow-900">
-              {t.heading}
+              {t.practiceHeading}
             </h3>
             <h1 className="text-[60px] text-center font-medium font-serif uppercase pt-4 text-slate-800">
-              {t.title}
+              {t.practiceTitle}
             </h1>
 
             {/* Practice Items */}

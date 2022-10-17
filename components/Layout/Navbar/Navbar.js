@@ -58,47 +58,32 @@ function Navbar() {
                             {/*----------------------- Link list ----------------------- */}
                             <div className="hidden lg:flex gap-x-6" id="navbar-links">
 
-                                {/* Posts Link */}
+                                {/* About Link */}
                                 <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
-                                    <Link href="/posts">{t.button1}</Link>
+                                    <Link href="/about">{t.button1}</Link>
                                 </div>
+
+                                {/* Practice Link */}
                                 <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
-                                    <Link href="#practice-area">{t.button2}</Link>
+                                    <Link href="/#practice-area">{t.button2}</Link>
                                 </div>
-                                <div>
-                                    <a
-                                        className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#about"
-                                    >
-                                        {t.button3}
-                                    </a>
+
+                                {/* Testimonials Link */}
+                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                    <Link href="/#testimonials">{t.button4}</Link>
                                 </div>
-                                <div>
-                                    <a
-                                        className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#testimonials"
-                                    >
-                                        {t.button4}
-                                    </a>
+
+                                {/* Contact Us Link */}
+                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                    <Link href="/#contact-us">{t.button5}</Link>
                                 </div>
-                                <div>
-                                    <a
-                                        className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                        href="#contact-us"
-                                    >
-                                        {t.button5}
-                                    </a>
-                                </div>
+
+
                             </div>
 
                             {/*----------------------- Language ----------------------- */}
-                            <div className="hidden lg:flex">
-                                <a
-                                    className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100"
-                                    href={t.page}
-                                >
-                                    {t.button6}
-                                </a>
+                            <div className="hidden lg:flex text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                <Link href="" locale={t.page}>{t.button6}</Link>
                             </div>
 
                             {/*----------------------- Contact Us ----------------------- */}
@@ -111,10 +96,10 @@ function Navbar() {
                             </div>
 
                             {/*----------------------- Off-canvas Menu ----------------------- */}
-                            <div className="xs:flex">
-                                <a href="#" className="text-yellow-700" id="toggle-button">
+                            <div className="xs:flex text-yellow-700 cursor-pointer">
+                                <Link href="#" id="toggle-button">
                                     <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

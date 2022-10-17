@@ -2,14 +2,14 @@ import React, {Fragment} from 'react'
 import Image from "next/image";
 import immigrationGIrl from "public/images/immigration-girl.jpg"
 import {useRouter} from "next/router";
-import vision_en from "../../public/locales/en/vision_en";
-import vision_es from "../../public/locales/es/vision_es";
+import indexPageEnglish from "../../public/locales/en/index-page";
+import indexPageSpanish from "../../public/locales/es/index-page";
 
 function Vision() {
 
     const router = useRouter();
     const {locale} = router;
-    const t = locale === 'en' ? vision_en : vision_es;
+    const t = locale === 'en' ? indexPageEnglish : indexPageSpanish;
 
   return (
     <Fragment>
@@ -22,17 +22,17 @@ function Vision() {
 
                     {/*Heading*/}
                     <h3 className="text-[20px] text-center md:text-right text-yellow-900 uppercase">
-                        {t.heading}
+                        {t.visionHeading}
                     </h3>
 
                     {/*Title*/}
                     <h2 className="text-[32px] text-center md:text-[42px] md:text-right uppercase mb-12 text-slate-700 font-serif">
-                        {t.title}
+                        {t.visionTitle}
                     </h2>
 
                     {/*Paragraph*/}
                     <p className="text-[16px] leading-[25px] mt-4 text-justify indent-8">
-                        {t.paragraph}
+                        {t.visionParagraph}
                     </p>
                 </div>
 

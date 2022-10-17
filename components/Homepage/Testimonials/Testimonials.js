@@ -1,28 +1,28 @@
 import React from 'react'
 import Link from "next/link";
-import testimonials_en from '../../../public/locales/en/testimonials_en'
-import testimonials_es from '../../../public/locales/es/testimonials_es'
 import {useRouter} from "next/router";
 import TestimonialItems from "@components/Homepage/Testimonials/testimonials-items";
+import indexPageEnglish from "../../../public/locales/en/index-page";
+import indexPageSpanish from "../../../public/locales/es/index-page";
 
 function Testimonials() {
 
   const router = useRouter();
   const {locale} = router;
-  const t = locale === 'en' ? testimonials_en : testimonials_es;
+  const t = locale === 'en' ? indexPageEnglish : indexPageSpanish;
 
   return (
     <div>
         {/*########################### Testimonials ########################### */}
-      <section class="bg-back-2 bg-cover bg-fixed bg-no-repeat py-[60px]" id="testimonials">
-        <div class="container mx-auto">
+      <section className="bg-back-2 bg-cover bg-fixed bg-no-repeat py-[60px]" id="testimonials">
+        <div className="container mx-auto">
 
           {/*============= Testimonial-Row 1 ============= */}
           <h2 className="text-[20px] text-neutral-200 text-center uppercase">
-            {t.heading}
+            {t.testimonialHeading}
           </h2>
-          <h1 class="text-[42px] text-center text-neutral-200 font-serif uppercase">
-            {t.title}
+          <h1 className="text-[42px] text-center text-neutral-200 font-serif uppercase">
+            {t.testimonialTitle}
           </h1>
 
           {/*============= Testimonial-Row 2 ============= */}
@@ -36,7 +36,7 @@ function Testimonials() {
                     type="button"
                     className="text-white bg-yellow-600 rounded-lg md:text-[20px] leading-[25px] px-7 py-4 w-[14rem]"
                 >
-                  More Reviews
+                  {t.testimonialReviews}
                 </button>
               </Link>
             </div>

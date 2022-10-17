@@ -1,14 +1,14 @@
 import React from 'react'
 import Link from "next/link";
-import contact_en from "../../public/locales/en/contact_en";
-import contact_es from "../../public/locales/es/contact_es";
 import {useRouter} from "next/router";
+import indexPageEnglish from "../../public/locales/en/index-page";
+import indexPageSpanish from "../../public/locales/es/index-page";
 
 function Contact() {
 
     const router = useRouter();
     const {locale} = router;
-    const t = locale === 'en' ? contact_en : contact_es;
+    const t = locale === 'en' ? indexPageEnglish : indexPageSpanish;
 
   return (
     <div>
@@ -20,12 +20,12 @@ function Contact() {
             <div className="p-12">
                 {/*============= heading ============= */}
                 <h1 className="text-[20px] pb-[36px] text-yellow-900 uppercase">
-                    {t.heading}
+                    {t.contactHeading}
                 </h1>
 
                 {/*============= Title ============= */}
                 <h1 className="text-[42px] font-serif pb-[36px] text-left font-medium uppercase text-slate-700">
-                    {t.title}
+                    {t.contactTitle}
                 </h1>
 
                 {/*============= List Column ============= */}
@@ -35,7 +35,7 @@ function Contact() {
                         {/*============= Address Row ============= */}
                         <div className="grid">
                             <h3 className="font-medium text-2xl text-yellow-900 pb-2">
-                                {t.subtitle1}
+                                {t.contactSubtitle1}
                             </h3>
                             <div className="flex gap-x-4">
                                 <span className="material-symbols-outlined">pin_drop</span>
@@ -52,7 +52,7 @@ function Contact() {
                         {/*============= Phone Number Row ============= */}
                         <div className="grid">
                             <h3 className="font-medium text-2xl text-yellow-900 pb-2">
-                                {t.subtitle2}
+                                {t.contactSubtitle2}
                             </h3>
 
                             <div className="flex gap-x-4">
@@ -69,7 +69,7 @@ function Contact() {
                         {/*============= Email Row ============= */}
                         <div className="grid">
                             <h3 className="font-medium text-2xl text-yellow-900 pb-2">
-                                {t.subtitle3}
+                                {t.contactSubtitle3}
                             </h3>
                             <div className="flex gap-x-4">
                                 <span className="material-symbols-outlined">mail</span>
