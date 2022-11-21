@@ -3,7 +3,7 @@ import {useRouter} from "next/router";
 import indexPageEnglish from "../../public/locales/en/index-page";
 import indexPageSpanish from "../../public/locales/es/index-page";
 
-function Hero() {
+function Hero({slogan}) {
 
     const router = useRouter();
     const {locale} = router;
@@ -38,6 +38,9 @@ function Hero() {
       </header>
     </Fragment>
   )
+
+
+
 }
 
 export default Hero

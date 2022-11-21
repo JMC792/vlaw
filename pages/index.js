@@ -1,9 +1,7 @@
 import {Fragment} from 'react'
-import Head from "next/head";
 import Hero from "@components/Homepage/Hero";
 import About from "@components/Homepage/About";
 import Testimonials from "@components/Homepage/Testimonials/Testimonials";
-import Topbar from "@components/Layout/Navbar/Topbar";
 import Notification from "@components/Homepage/Notification";
 import Vision from "@components/Homepage/Vision";
 import Practices from "@components/Homepage/Practice/Practices";
@@ -15,10 +13,8 @@ export default function Home() {
     <Fragment>
           <div className={"text-black bg-white"}>
               <head>
-                  <script
-                      src="https://kit.fontawesome.com/445848c381.js"
-                      crossOrigin="anonymous"
-                  ></script>
+                  <title>Valentin Law</title>
+                  <script src="https://kit.fontawesome.com/445848c381.js" crossOrigin="anonymous"/>
               </head>
               <Hero/>
               <Notification/>
@@ -31,5 +27,5 @@ export default function Home() {
           </div>
 
     </Fragment>
-  );
+  )
 }

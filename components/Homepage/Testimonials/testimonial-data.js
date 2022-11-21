@@ -1,5 +1,17 @@
 export const testimonialData = [
     {
+        title: 'Knowledgeable and thorough…',
+        paragraph: 'Mr . Valentin has collaborated with our firm on a few removal cases before Charlotte Immigration Court and handled these with the utmost professionalism . He was very good at reviewing evidence and properly preparing clients to testify before immigration Court . We look forward to working with Mr. Valentin in the future . His knowledge of the law and thoroughness in representing clients before EOIR is impressive ',
+        name: 'L. Arenas Rochelo ',
+        date: 'October 28, 2022'
+    },
+    {
+        title: 'AMAZING, KNOWLEDGEABLE AND THE BEST',
+        paragraph: 'Attorney Valentin is so amazing and knowledgeable in the area of immigration law. I would use him hands down and refer all clients to him. If you have an immigration case and have not contacted him, you must call him immediately',
+        name: 'Milton',
+        date: 'September 21, 2022'
+    },
+    {
         title: 'Excellent Litigator',
         paragraph: 'Julio Valentin is an exceptional attorney and an even better litigator! Julio epitomizes integrity and dedication when representing his clients. Highly recommend!',
         name: 'Fernando',
@@ -23,25 +35,4 @@ export const testimonialData = [
         name: 'Joseph',
         date: 'May 31, 2022'
     },
-    {
-        title: 'He’s great',
-        paragraph: 'I cannot thank Julio enough for all of his help over the\n' +
-            '                            years. I was blown away by his integrity and all the hard work\n' +
-            '                            he did for my family. His work was excellent and he always\n' +
-            '                            responded promptly and paid attention to detail. I would\n' +
-            '                            recommend Julio to anyone who is serious about having an\n' +
-            '                            experienced lawyer that they can trust. Will definitely work\n' +
-            '                            with him again in the future!',
-        name: 'Aakash',
-        date: 'May 15, 2022'
-    },
-    {
-        title: 'Helped my mother.5.0 stars',
-        paragraph: 'Finally after a year fighting our immigration court case.\n' +
-            '                            Julio was able to do the impossible with his impeccable\n' +
-            '                            argumentative skills and won. Very glad we hired him for our\n' +
-            '                            case!',
-        name: 'Franklin',
-        date: 'May 12, 2022'
-    }
 ]

@@ -14,14 +14,12 @@ function Navbar() {
     const t = locale === 'en' ? navbar_en : navbar_es;
 
 
-    {/*============= Mobile Navbar Responsive  =============*/
-    }
+    // Mobile Navbar Responsive
     const [offcanvas, setOffcanvas] = useState(false);
     const showOffcanvas = () => setOffcanvas(!offcanvas);
 
 
-    {/*============= Adds sticky  =============*/
-    }
+    // adds sticky
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
@@ -29,6 +27,7 @@ function Navbar() {
         };
     });
 
+    // adds is-sticky css class once scrolled over 250 px
     const isSticky = (e) => {
         const navbar = document.querySelector('.header-selection');
         const scrollTop = window.scrollY;
@@ -37,77 +36,79 @@ function Navbar() {
             : navbar.classList.remove('is-sticky');
     };
 
-
-    {/*###################################################### Main HTML  ######################################################*/
-    }
     return (
         <Fragment>
+            <nav className="absolute w-full z-10 top-0" id="#navbar">
 
-            {/*----------------------- Desktop Nav ----------------------- */}
-            <nav className="bg-slate-800 w-full z-10 top-0" id="#navbar">
-                {/*----------------------- TopBar ----------------------- */}
+                {/* TopBar */}
                 <Topbar/>
+
+                {/* navbar event listener  */}
                 <div className="header-selection sticky-style-1 py-4">
+
+                    {/* container */}
                     <div className="container mx-auto">
-                        <div className="flex flex-nowrap items-center justify-between">
-                            {/*----------------------- Logo ----------------------- */}
+                        <div className="flex items-center justify-between">
+
+                            {/*  Logo */}
                             <Link href={"/"}>
-                                <h1 className="text-2xl font-medium font-serif text-yellow-700 hover:text-yellow-600 transition-colors delay-100 cursor-pointer">Valentin Law</h1>
+                                <h1 className="text-2xl font-medium font-serif text-yellow-800 hover:text-yellow-600 transition-colors delay-100 cursor-pointer">Valentin Law</h1>
                             </Link>
 
-                            {/*----------------------- Link list ----------------------- */}
+                            {/*  Link list */}
                             <div className="hidden lg:flex gap-x-6" id="navbar-links">
 
                                 {/* About Link */}
-                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-[20px] text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
                                     <Link href="/about">{t.button1}</Link>
                                 </div>
 
                                 {/* Practice Link */}
-                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-[20px] text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
                                     <Link href="/#practice-area">{t.button2}</Link>
                                 </div>
 
                                 {/* Testimonials Link */}
-                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-[20px] text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
                                     <Link href="/#testimonials">{t.button4}</Link>
                                 </div>
 
                                 {/* Contact Us Link */}
-                                <div className="text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-[20px] text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
                                     <Link href="/#contact-us">{t.button5}</Link>
                                 </div>
 
 
                             </div>
 
-                            {/*----------------------- Language ----------------------- */}
-                            <div className="hidden lg:flex text-[20px] text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                            {/* Language */}
+                            <div className="hidden lg:flex text-[20px] text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
                                 <Link href="" locale={t.page}>{t.button6}</Link>
                             </div>
 
-                            {/*----------------------- Contact Us ----------------------- */}
-                            <div className=" lg:block text-yellow-700 hover:text-yellow-600 transition-colors delay-100">
+                            {/* Contact Us */}
+                            <div className=" lg:block text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
                                 <a href="tel: 404-919-0443" className="text-center">
-                                    <i className="fa-solid fa-phone"></i>
+                                    <i className="fa-solid fa-phone"/>
                                         <span className="ml-2 text-center ">{t.button5}</span>
                                             <div>404-919-0443</div>
                                 </a>
                             </div>
 
-                            {/*----------------------- Off-canvas Menu ----------------------- */}
-                            <div className="xs:flex text-yellow-700 cursor-pointer">
+                            {/* Off-canvas Menu */}
+                            <div className="text-yellow-800 cursor-pointer lg:hidden">
                                 <Link href="#" id="toggle-button">
                                     <span onClick={showOffcanvas} className="material-symbols-outlined">menu</span>
                                 </Link>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
             </nav>
 
-            {/*----------------------- Mobile Nav ----------------------- */}
+            {/* Mobile Nav */}
             <div className={offcanvas ? "offcanvas-menu-wrap active" : "offcanvas-menu-wrap"}>
                 <nav className="offcanvas-menu z-50">
                     <ul className="offcanvas-menu-items" onClick={showOffcanvas}>
@@ -138,6 +139,7 @@ function Navbar() {
                     </ul>
                 </nav>
             </div>
+
         </Fragment>
     );
 }

@@ -4,7 +4,6 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <title>Valentin Law</title>
                 <link rel="icon" href="gavel.svg"/>
                 <link
                     rel="stylesheet"

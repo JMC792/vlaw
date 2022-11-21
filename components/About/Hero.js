@@ -7,32 +7,39 @@ function Hero() {
 
     const router = useRouter();
     const {locale} = router;
-    const t = locale === 'en' ? aboutPageEn : aboutPageSp;
+    const t = locale === 'en'
+        ? aboutPageEn
+        : aboutPageSp;
 
     return (
         <Fragment>
             {/*########################### Hero ###########################*/}
-            <header className="bg-back-1 bg-cover bg-no-repeat h-screen" id="header">
+            <div className="bg-back-10 bg-cover bg-no-repeat h-screen" id="header">
                 {/* Container */}
                 <div className="container mx-auto">
 
-                    {/* Hero Text */}
-                    <div className="p-12 text-shadow">
-                        <div className="font-sans text-center pt-[200px] lg:p-[25rem]">
-                            {/*============= Row 1 / Title============= */}
-                            <h2 className="lg:leading-[100px] text-[30px] md:text-[60px] leading-[1.2] text-slate-700 font-serif uppercase">
+                    {/* Hero Padding */}
+                    <div className="py-[15rem] px-[3rem] lg:p-[30rem]">
+
+                        {/* Hero Text */}
+                        <div className="text-shadow text-center text-slate-700 uppercase">
+
+                            {/* Title */}
+                            <h2 className="text-2xl md:text-5xl">
                                 {t.heroTitle}
                             </h2>
 
-                            {/*============= Row 2 / Subtitle ============= */}
-                            <h3 className="text-[14px] md:text-[25px] mt-[12px] text-slate-700 font-serif uppercase">
+                            {/* Subtitle */}
+                            <h3 className="text-xl md:text-3xl mt-6">
                                 {t.heroSubtitle}
                             </h3>
+
                         </div>
+
                     </div>
 
                 </div>
-            </header>
+            </div>
         </Fragment>
     )
 }
