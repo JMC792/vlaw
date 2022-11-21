@@ -33,6 +33,7 @@ export default function EarlyLife(){
                     <div className={"hidden md:grid"}>
                         <Image
                             src={client}
+                            alt={"Lawyer-Client"}
                             layout={"intrinsic"}
                             className={"rounded-xl"}
                         />

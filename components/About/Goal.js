@@ -21,6 +21,7 @@ export default function Goal(){
                     {/* Left Grid*/}
                     <div className={" md:grid"}>
                         <Image
+                            alt={"Julio-Pillars"}
                             src={picture}
                             height={"1000"}
                             width={"900"}
