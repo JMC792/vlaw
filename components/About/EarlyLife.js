@@ -34,7 +34,6 @@ export default function EarlyLife(){
                         <Image
                             src={client}
                             alt={"Lawyer-Client"}
-                            layout={"intrinsic"}
                             className={"rounded-xl"}
                         />
                     </div>

@@ -7,15 +7,17 @@ import Vision from "@components/Homepage/Vision";
 import Practices from "@components/Homepage/Practice/Practices";
 import Representation from "@components/Homepage/Representation";
 import Contact from "@components/Homepage/Contact";
+import Head from "next/head";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <Fragment>
-          <div className={"text-black bg-white"}>
-              <head>
-                  <title>Valentin Law</title>
-                  <script src="https://kit.fontawesome.com/445848c381.js" crossOrigin="anonymous"/>
-              </head>
+        <Head>
+            <title>Valentin Law</title>
+            <link rel="icon" href="gavel.svg"/>
+        </Head>
+        <div className={"text-black bg-white"}>
               <Hero/>
               <Notification/>
               <Vision/>

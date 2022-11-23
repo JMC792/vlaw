@@ -23,8 +23,7 @@ export default function Goal(){
                         <Image
                             alt={"Julio-Pillars"}
                             src={picture}
-                            height={"1000"}
-                            width={"900"}
+                            height={"850"}
                             className={"rounded-xl"}
                         />
                     </div>

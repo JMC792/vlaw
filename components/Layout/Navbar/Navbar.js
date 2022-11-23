@@ -131,7 +131,7 @@ function Navbar() {
                             return (
                                 <li key={index} className={item.cName}>
                                     <Link href={item.path}>
-                                        <a>{item.title}</a>
+                                        <div>{item.title}</div>
                                     </Link>
                                 </li>
                             );

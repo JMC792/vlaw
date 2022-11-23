@@ -39,7 +39,8 @@ function Vision() {
                 {/* Right Grid / Image */}
                 <Image
                     src={immigrationGIrl}
-                    height={1600}
+                    alt = "Immigration Activist"
+                    height={800}
                     className={"rounded-xl"}
                 />
             </div>

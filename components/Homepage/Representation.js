@@ -34,7 +34,7 @@ function Representation() {
           <div className={"hidden md:grid"}>
               <Image
                   src={newYork}
-                  layout={"intrinsic"}
+                  alt={"City of New York"}
                   className={"rounded-xl"}
               />
           </div>
