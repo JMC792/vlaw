@@ -56,11 +56,11 @@ function About() {
 
                     {/* Button */}
                     <Link href={"/about"}>
-                        <button className={"bg-yellow-600 lg:mx-36 py-4 rounded-xl hover:bg-yellow-500 transition ease-in"}>
+                        <div className={"bg-yellow-600 lg:mx-36 py-4 rounded-xl hover:bg-yellow-500 transition ease-in"}>
                             <div className={"text-white text-center text-xl"}>
                                 {t.aboutLink}
                             </div>
-                        </button>
+                        </div>
                     </Link>
 
                 </div>

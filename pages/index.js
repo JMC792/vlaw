@@ -8,7 +8,6 @@ import Practices from "@components/Homepage/Practice/Practices";
 import Representation from "@components/Homepage/Representation";
 import Contact from "@components/Homepage/Contact";
 import Head from "next/head";
-import Script from "next/script";
 
 export default function Home() {
   return (
