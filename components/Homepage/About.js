@@ -54,14 +54,14 @@ function About() {
 
                     </div>
 
-                    {/* Button */}
-                    <Link href={"/about"}>
-                        <div className={"bg-yellow-600 lg:mx-36 py-4 rounded-xl hover:bg-yellow-500 transition ease-in"}>
-                            <div className={"text-white text-center text-xl"}>
-                                {t.aboutLink}
-                            </div>
-                        </div>
-                    </Link>
+                    {/*/!* Button *!/*/}
+                    {/*<Link href={"/about"}>*/}
+                    {/*    <div className={"bg-yellow-600 lg:mx-36 py-4 rounded-xl hover:bg-yellow-500 transition ease-in"}>*/}
+                    {/*        <div className={"text-white text-center text-xl"}>*/}
+                    {/*            {t.aboutLink}*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</Link>*/}
 
                 </div>
             </div>

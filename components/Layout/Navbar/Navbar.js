@@ -60,7 +60,7 @@ function Navbar() {
 
                                 {/* About Link */}
                                 <div className="text-[20px] text-yellow-800 hover:text-yellow-600 transition-colors delay-100">
-                                    <Link href="/about">{t.button1}</Link>
+                                    <Link href="/#about">{t.button1}</Link>
                                 </div>
 
                                 {/* Practice Link */}
